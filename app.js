@@ -1,6 +1,6 @@
 /* ==========================================================================
-   MISTRALKOMPARE — app.js
-   Render tabel, filter, sorting, search, modal, dan interaksi.
+   SEPUTARMODELAI — app.js
+   Hero stats global + tabel komparasi Mistral (filter, sort, search, modal).
    ========================================================================== */
 
 (function () {
@@ -149,37 +149,16 @@
       .join("");
   }
 
-  /* ---------- Render Legacy Grid ---------- */
-  function renderLegacyGrid() {
-    const grid = $("#legacyGrid");
-    const legacyModels = window.MISTRAL_MODELS.filter((m) => m.status === "deprecated");
-
-    grid.innerHTML = legacyModels
-      .map((m) => `
-        <div class="legacy-card fade-in">
-          <h3>${m.name}</h3>
-          <div class="legacy-api">${m.apiName}</div>
-          <div class="legacy-desc">${m.story}</div>
-          <div class="legacy-meta">
-            <span>${m.params}</span>
-            <span>${m.context}</span>
-            <span>${m.release}</span>
-            <span>${m.openWeight ? "🔓 Open-Weight" : "🔒 Proprietary"}</span>
-          </div>
-        </div>`)
-      .join("");
-  }
-
-  /* ---------- Render Hero Stats ---------- */
+  /* ---------- Render Hero Stats (Global) ---------- */
   function renderHeroStats() {
     const el = $("#heroStats");
-    const ga = window.MISTRAL_MODELS.filter((m) => m.status === "general-availability").length;
-    const dep = window.MISTRAL_MODELS.filter((m) => m.status === "deprecated").length;
-    const ow = window.MISTRAL_MODELS.filter((m) => m.openWeight).length;
-    const cats = new Set(window.MISTRAL_MODELS.map((m) => m.category)).size;
+    const all = window.MISTRAL_MODELS;
+    const ga = all.filter((m) => m.status === "general-availability").length;
+    const ow = all.filter((m) => m.openWeight).length;
+    const cats = new Set(all.map((m) => m.category)).size;
 
     el.innerHTML = `
-      <div class="hero-stat"><div class="num">${window.MISTRAL_MODELS.length}</div><div class="label">Total Model</div></div>
+      <div class="hero-stat"><div class="num">${all.length}</div><div class="label">Model AI</div></div>
       <div class="hero-stat"><div class="num">${ga}</div><div class="label">Aktif (GA)</div></div>
       <div class="hero-stat"><div class="num">${ow}</div><div class="label">Open-Weight</div></div>
       <div class="hero-stat"><div class="num">${cats}</div><div class="label">Kategori</div></div>
@@ -225,11 +204,22 @@
     document.body.style.overflow = "";
   }
 
+  /* ---------- Navbar scroll effect ---------- */
+  function initNavbarScroll() {
+    const navbar = $("#navbar");
+    const onScroll = () => {
+      if (window.scrollY > 30) navbar.classList.add("scrolled");
+      else navbar.classList.remove("scrolled");
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
   /* ---------- Event Listeners ---------- */
   function init() {
     renderHeroStats();
     renderTable();
-    renderLegacyGrid();
+    initNavbarScroll();
 
     /* Filter buttons */
     $$(".filter-btn").forEach((btn) => {
@@ -285,8 +275,6 @@
     $("#navToggle").addEventListener("click", () => {
       $(".nav-links").classList.toggle("open");
     });
-
-    /* Navbar links close on mobile */
     $$(".nav-links a").forEach((link) => {
       link.addEventListener("click", () => {
         $(".nav-links").classList.remove("open");
