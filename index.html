@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mistral AI — Komparasi Seluruh Model | 2026</title>
+  <meta name="description" content="Panduan lengkap dan komparatif seluruh model Mistral AI: Large 3, Medium 3.5, Small 4, Devstral 2, Magistral, Voxtral, dan lainnya." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="logo-icon">◆</span> MistralKompare
+      </a>
+      <div class="nav-links">
+        <a href="#hero">Beranda</a>
+        <a href="#story">Cerita</a>
+        <a href="#compare">Komparasi</a>
+        <a href="#legacy">Legacy</a>
+        <a href="#resources">Sumber</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <header class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <span class="hero-badge">Diperbarui Juli 2026</span>
+      <h1>Seluruh Model <br/><span class="accent">Mistral AI</span></h1>
+      <p class="hero-sub">
+        Dari Mixtral 8x7B pertama hingga Large 3 frontier — jelajahi, bandingkan,
+        dan pahami setiap model dalam ekosistem Mistral AI dalam satu tempat.
+      </p>
+      <div class="hero-stats" id="heroStats">
+        <!-- diisi oleh JS -->
+      </div>
+      <a href="#compare" class="hero-cta">Lihat Komparasi ↓</a>
+    </div>
+  </header>
+
+  <!-- ========== STORY / NARASI ========== -->
+  <section class="story" id="story">
+    <div class="container">
+      <span class="section-label">Narasi</span>
+      <h2 class="section-title">Kisah Ekosistem <span class="accent">Mistral AI</span></h2>
+      <div class="story-grid">
+        <article class="story-card">
+          <div class="story-icon">🧠</div>
+          <h3>Awal Mula: Open-Source MoE</h3>
+          <p>
+            Desember 2023, <strong>Mixtral 8x7B</strong> menggemparkan dunia. Arsitektur
+            Mixture-of-Experts yang selama ini terkunci di model tertutup, tiba-tiba
+            tersedia secara terbuka. Mistral membuktikan bahwa model open-weight bisa
+            bersaing dengan GPT-4 kala itu.
+          </p>
+        </article>
+        <article class="story-card">
+          <div class="story-icon">🚀</div>
+          <h3>Era Flagship: Large & Medium</h3>
+          <p>
+            <strong>Mistral Large 2</strong> (Juli 2024) mengukuhkan Mistral sebagai
+            pemain kelas berat. Diikuti <strong>Pixtral Large</strong> untuk multimodal,
+            dan akhirnya <strong>Large 3</strong> (Des 2025) dengan MoE 675B parameter
+            dan konteks 262K token — frontier sejati.
+          </p>
+        </article>
+        <article class="story-card">
+          <div class="story-icon">💻</div>
+          <h3>Spesialis Coding: Codestral → Devstral</h3>
+          <p>
+            Mistral tak hanya soal generalist. <strong>Codestral</strong> hadir sebagai
+            code-generator, lalu berevolusi jadi <strong>Devstral 2</strong> — model
+            agentic coding yang bisa membaca seluruh repo dan menjalankan tool secara
+            otonom.
+          </p>
+        </article>
+        <article class="story-card">
+          <div class="story-icon">⚡</div>
+          <h3>Reasoning & Multimodal</h3>
+          <p>
+            <strong>Magistral</strong> membuka cabang reasoning dengan chain-of-thought
+            transparan. <strong>Voxtral</strong> memproses audio secara native.
+            <strong>Small 4</strong> membawa multimodal ke kelas ringan. Ekosistem
+            Mistral kini lengkap: teks, kode, suara, gambar, dan dokumen.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== KOMPARASI INTERAKTIF ========== -->
+  <section class="compare" id="compare">
+    <div class="container">
+      <span class="section-label">Database Model</span>
+      <h2 class="section-title">Komparasi <span class="accent">Seluruh Model</span></h2>
+      <p class="section-desc">Klik kategori, cari nama, atau urutkan kolom untuk menemukan model yang tepat.</p>
+
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <div class="filter-group">
+          <button class="filter-btn active" data-filter="all">Semua</button>
+          <button class="filter-btn" data-filter="generalist">🧠 Generalist</button>
+          <button class="filter-btn" data-filter="coding">💻 Coding</button>
+          <button class="filter-btn" data-filter="reasoning">⚡ Reasoning</button>
+          <button class="filter-btn" data-filter="audio">🎙️ Audio</button>
+          <button class="filter-btn" data-filter="vision">👁️ Vision / OCR</button>
+          <button class="filter-btn" data-filter="embedding">📊 Embedding</button>
+        </div>
+        <div class="search-group">
+          <input type="text" id="searchInput" class="search-input" placeholder="Cari model..." />
+          <button class="toggle-legacy-btn" id="toggleLegacy">Tampilkan Legacy</button>
+        </div>
+      </div>
+
+      <!-- Tabel -->
+      <div class="table-wrap">
+        <table class="compare-table" id="compareTable">
+          <thead>
+            <tr>
+              <th class="sortable" data-sort="name">Model <span class="sort-arrow">↕</span></th>
+              <th class="sortable" data-sort="params">Parameter <span class="sort-arrow">↕</span></th>
+              <th class="sortable" data-sort="context">Konteks <span class="sort-arrow">↕</span></th>
+              <th class="sortable" data-sort="inputPrice">Harga In <span class="sort-arrow">↕</span></th>
+              <th class="sortable" data-sort="outputPrice">Harga Out <span class="sort-arrow">↕</span></th>
+              <th>Modalitas</th>
+              <th>Status</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="compareBody">
+            <!-- diisi oleh JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DETAIL MODAL ========== -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div id="modalContent">
+        <!-- diisi oleh JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== LEGACY SECTION ========== -->
+  <section class="legacy" id="legacy">
+    <div class="container">
+      <span class="section-label">Museum</span>
+      <h2 class="section-title">Model <span class="accent">Legacy & Deprecated</span></h2>
+      <p class="section-desc">Model yang telah menorehkan sejarah dan kini digantikan generasi baru.</p>
+      <div class="legacy-grid" id="legacyGrid">
+        <!-- diisi oleh JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== RESOURCES ========== -->
+  <section class="resources" id="resources">
+    <div class="container">
+      <span class="section-label">Sumber</span>
+      <h2 class="section-title">Referensi & <span class="accent">Tautan Resmi</span></h2>
+      <div class="resource-list">
+        <a href="https://docs.mistral.ai/models/overview" target="_blank" rel="noopener" class="resource-card">
+          <span class="resource-icon">📖</span>
+          <div>
+            <h3>Models Overview — Mistral Docs</h3>
+            <p>Daftar resmi seluruh model beserta spesifikasi teknis.</p>
+          </div>
+          <span class="resource-arrow">→</span>
+        </a>
+        <a href="https://mistral.ai/pricing" target="_blank" rel="noopener" class="resource-card">
+          <span class="resource-icon">💰</span>
+          <div>
+            <h3>Pricing — Mistral AI</h3>
+            <p>Halaman harga terbaru untuk semua model API.</p>
+          </div>
+          <span class="resource-arrow">→</span>
+        </a>
+        <a href="https://huggingface.co/mistralai" target="_blank" rel="noopener" class="resource-card">
+          <span class="resource-icon">🤗</span>
+          <div>
+            <h3>Mistral AI — Hugging Face</h3>
+            <p>Bobot terbuka dan model untuk komunitas.</p>
+          </div>
+          <span class="resource-arrow">→</span>
+        </a>
+        <a href="https://benchlm.ai/best/mistral-models" target="_blank" rel="noopener" class="resource-card">
+          <span class="resource-icon">📊</span>
+          <div>
+            <h3>Benchmarks — BenchLM</h3>
+            <p>Peringkat model Mistral berdasarkan benchmark publik.</p>
+          </div>
+          <span class="resource-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        <span class="logo-icon">◆</span> <strong>MistralKompare</strong> — Website komparasi independen.
+        Bukan situs resmi Mistral AI.
+      </p>
+      <p class="footer-sub">Data bersumber dari <a href="https://docs.mistral.ai/models/overview" target="_blank" rel="noopener">docs.mistral.ai</a> &amp; <a href="https://mistral.ai/pricing" target="_blank" rel="noopener">mistral.ai/pricing</a>. Dibuat Juli 2026.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data/models.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
