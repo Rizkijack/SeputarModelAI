@@ -1180,4 +1180,5 @@ const MISTRAL_MODELS = [
 
 if (typeof window !== "undefined") {
   window.MISTRAL_MODELS = MISTRAL_MODELS;
+  window.PROVIDER_MODELS = MISTRAL_MODELS;
 }
