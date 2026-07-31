@@ -8,7 +8,7 @@ const ANTHROPIC_MODELS = [
   /* =========================== CLAUDE 5 SERIES (AKTIF) =========================== */
   {
     id: "claude-5-opus",
-    family: "Claude",
+    family: "Claude 5",
     name: "Claude 5 Opus",
     apiName: "claude-5-opus-latest",
     version: "202605",
@@ -29,7 +29,7 @@ const ANTHROPIC_MODELS = [
   },
   {
     id: "claude-5-opus-fast",
-    family: "Claude",
+    family: "Claude 5",
     name: "Claude 5 Opus (Fast)",
     apiName: "claude-5-opus-fast-latest",
     version: "202605",
@@ -50,7 +50,7 @@ const ANTHROPIC_MODELS = [
   },
   {
     id: "claude-5-sonnet",
-    family: "Claude",
+    family: "Claude 5",
     name: "Claude 5 Sonnet",
     apiName: "claude-5-sonnet-latest",
     version: "202604",
@@ -71,7 +71,7 @@ const ANTHROPIC_MODELS = [
   },
   {
     id: "claude-5-fable",
-    family: "Claude",
+    family: "Claude 5",
     name: "Claude 5 Fable",
     apiName: "claude-5-fable-latest",
     version: "202606",
@@ -94,7 +94,7 @@ const ANTHROPIC_MODELS = [
   /* =========================== CLAUDE 3.5 SERIES =========================== */
   {
     id: "claude-3-5-sonnet",
-    family: "Claude",
+    family: "Claude 3.5",
     name: "Claude 3.5 Sonnet",
     apiName: "claude-3-5-sonnet-20241022",
     version: "20241022",
@@ -115,7 +115,7 @@ const ANTHROPIC_MODELS = [
   },
   {
     id: "claude-3-5-haiku",
-    family: "Claude",
+    family: "Claude 3.5",
     name: "Claude 3.5 Haiku",
     apiName: "claude-3-5-haiku-20241022",
     version: "20241022",
@@ -135,10 +135,10 @@ const ANTHROPIC_MODELS = [
     story: "Haiku menawarkan kecerdasan Sonnet generasi sebelumnya namun dengan harga dan kecepatan yang cocok untuk tugas volume tinggi."
   },
 
-  /* =========================== CLAUDE 3 SERIES (LEGACY) =========================== */
+  /* =========================== CLAUDE 3 SERIES =========================== */
   {
     id: "claude-3-opus",
-    family: "Claude",
+    family: "Claude 3",
     name: "Claude 3 Opus",
     apiName: "claude-3-opus-20240229",
     version: "20240229",
@@ -156,6 +156,136 @@ const ANTHROPIC_MODELS = [
     strengths: ["Gaya penulisan natural", "Kreativitas tingkat tinggi"],
     bestFor: "Tugas legacy yang bergantung pada 'rasa' tulisan Opus lama.",
     story: "Mantan juara flagship. Claude 3 Opus diingat karena cara komunikasinya yang sangat manusiawi dan elok."
+  },
+  {
+    id: "claude-3-sonnet",
+    family: "Claude 3",
+    name: "Claude 3 Sonnet",
+    apiName: "claude-3-sonnet-20240229",
+    version: "20240229",
+    category: "generalist",
+    categoryLabel: "Generalist (Legacy)",
+    params: "Proprietary",
+    context: "200K tokens",
+    inputPrice: "$3.00",
+    outputPrice: "$15.00",
+    modalities: ["Teks", "Vision"],
+    openWeight: false,
+    status: "deprecated",
+    release: "2024-02",
+    tagline: "Versi seimbang pertama dari seri Claude 3.",
+    strengths: ["Keseimbangan kecepatan dan kecerdasan", "Vision kapabilitas awal"],
+    bestFor: "Sudah digantikan oleh seri 3.5 dan 5.",
+    story: "Langkah awal Anthropic menuju model tier menengah yang kuat secara komersial."
+  },
+  {
+    id: "claude-3-haiku",
+    family: "Claude 3",
+    name: "Claude 3 Haiku",
+    apiName: "claude-3-haiku-20240307",
+    version: "20240307",
+    category: "generalist",
+    categoryLabel: "Speed / Efficiency",
+    params: "Proprietary",
+    context: "200K tokens",
+    inputPrice: "$0.25",
+    outputPrice: "$1.25",
+    modalities: ["Teks", "Vision"],
+    openWeight: false,
+    status: "deprecated",
+    release: "2024-03",
+    tagline: "Model teringan dan tercepat dari keluarga Claude 3.",
+    strengths: ["Vision dengan harga murah", "Kecepatan tinggi"],
+    bestFor: "Ekstraksi data cepat dan OCR ringan (legacy).",
+    story: "Haiku membuktikan bahwa model ringan bisa memiliki vision yang andal dengan harga pecahan sen."
+  },
+
+  /* =========================== CLAUDE 2 SERIES =========================== */
+  {
+    id: "claude-2-1",
+    family: "Claude 2",
+    name: "Claude 2.1",
+    apiName: "claude-2.1",
+    version: "2.1",
+    category: "generalist",
+    categoryLabel: "Generalist (Legacy)",
+    params: "Proprietary",
+    context: "200K tokens",
+    inputPrice: "$8.00",
+    outputPrice: "$24.00",
+    modalities: ["Teks"],
+    openWeight: false,
+    status: "deprecated",
+    release: "2023-11",
+    tagline: "Model pertama Anthropic dengan jendela konteks 200K.",
+    strengths: ["Konteks ekstra besar pada masanya", "Halusinasi berkurang secara signifikan"],
+    bestFor: "Riset sejarah arsitektur LLM.",
+    story: "Claude 2.1 adalah tonggak sejarah industri karena membawa konteks window ke 200K untuk pertama kalinya, memungkinkan pengunggahan buku utuh."
+  },
+  {
+    id: "claude-2-0",
+    family: "Claude 2",
+    name: "Claude 2.0",
+    apiName: "claude-2.0",
+    version: "2.0",
+    category: "generalist",
+    categoryLabel: "Generalist (Legacy)",
+    params: "Proprietary",
+    context: "100K tokens",
+    inputPrice: "$8.00",
+    outputPrice: "$24.00",
+    modalities: ["Teks"],
+    openWeight: false,
+    status: "deprecated",
+    release: "2023-07",
+    tagline: "Peningkatan besar dalam coding dan penalaran dari Claude 1.",
+    strengths: ["Koding lebih baik", "Kinerja akademis meningkat"],
+    bestFor: "Model masa lalu yang aman dan berhati-hati.",
+    story: "Claude 2.0 membangun reputasi Anthropic sebagai perusahaan yang mengedepankan keamanan (Constitutional AI)."
+  },
+
+  /* =========================== CLAUDE 1 SERIES =========================== */
+  {
+    id: "claude-instant-1-2",
+    family: "Claude 1",
+    name: "Claude Instant 1.2",
+    apiName: "claude-instant-1.2",
+    version: "1.2",
+    category: "generalist",
+    categoryLabel: "Speed (Legacy)",
+    params: "Proprietary",
+    context: "100K tokens",
+    inputPrice: "$0.80",
+    outputPrice: "$2.40",
+    modalities: ["Teks"],
+    openWeight: false,
+    status: "deprecated",
+    release: "2023-08",
+    tagline: "Generasi terakhir dari model ringan dan cepat seri pertama.",
+    strengths: ["Ringan", "Konteks 100K murah"],
+    bestFor: "Digunakan di awal 2023 untuk chat dan Q&A.",
+    story: "Claude Instant adalah jawaban awal Anthropic untuk model berkinerja tinggi dengan harga murah."
+  },
+  {
+    id: "claude-1",
+    family: "Claude 1",
+    name: "Claude 1.0 / 1.3",
+    apiName: "claude-1",
+    version: "1.0",
+    category: "generalist",
+    categoryLabel: "Generalist (Legacy)",
+    params: "Proprietary",
+    context: "100K tokens",
+    inputPrice: "—",
+    outputPrice: "—",
+    modalities: ["Teks"],
+    openWeight: false,
+    status: "deprecated",
+    release: "2023-03",
+    tagline: "Model awal yang menandai berdirinya ekosistem Claude.",
+    strengths: ["Konstitusional AI pertama", "Aman"],
+    bestFor: "Sejarah awal LLM.",
+    story: "Rilis perdana Anthropic pada Maret 2023. Memulai debut dengan konteks 9K yang tak lama kemudian didobrak menjadi 100K pada bulan Mei."
   }
 ];
 
