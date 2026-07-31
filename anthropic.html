@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Komparasi Model Mistral AI — SeputarModelAI</title>
-  <meta name="description" content="Komparasi lengkap seluruh model Mistral AI: Large 3, Medium 3.5, Small 4, Devstral 2, Magistral, Voxtral, dan lainnya." />
+  <title>Komparasi Model Anthropic — SeputarModelAI</title>
+  <meta name="description" content="Komparasi lengkap seluruh model Anthropic Claude: seri 5 Opus, Sonnet, Fable, hingga legacy 3.5." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
@@ -20,36 +20,36 @@
       </a>
       <div class="nav-links">
         <a href="index.html">Beranda</a>
-        <a href="mistral.html" class="active">Mistral AI</a>
-        <a href="anthropic.html">Anthropic</a>
+        <a href="mistral.html">Mistral AI</a>
+        <a href="anthropic.html" class="active">Anthropic</a>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
     </div>
   </nav>
 
   <!-- ========== SUB-PAGE HERO ========== -->
-  <header class="sub-hero">
-    <div class="sub-hero-bg"></div>
+  <header class="sub-hero anthropic-hero">
+    <div class="sub-hero-bg" style="background: radial-gradient(circle at top right, rgba(217,119,87,0.1) 0%, transparent 50%);"></div>
     <div class="container">
       <a href="index.html" class="back-link">← Kembali ke Beranda</a>
       <h1 class="sub-hero-title">
-        Komparasi <span class="accent">Mistral AI</span>
+        Komparasi <span class="accent" style="color: #d97757;">Anthropic</span>
       </h1>
       <p class="sub-hero-desc">
-        Dari Mixtral 8x7B pertama hingga Large 3 frontier — jelajahi, bandingkan,
-        dan pahami setiap model dalam ekosistem Mistral AI.
+        Dari Claude 3 yang melegenda hingga Claude 5 yang membawa jendela konteks 1 Juta token — 
+        jelajahi ekosistem model yang mengutamakan keamanan dan agen otonom.
       </p>
     </div>
   </header>
 
-  <!-- ========== KOMPARASI MISTRAL ========== -->
-  <section class="mistral" id="mistral">
+  <!-- ========== KOMPARASI ANTHROPIC ========== -->
+  <section class="mistral" id="anthropic-section">
     <div class="container">
       <div class="section-head">
-        <span class="section-label">Sub-bagian · Provider #1</span>
-        <h2 class="section-title">Database <span class="accent">Model</span></h2>
+        <span class="section-label">Sub-bagian · Provider #2</span>
+        <h2 class="section-title">Database <span class="accent" style="color: #d97757;">Model</span></h2>
         <p class="section-desc">
-          Klik kategori, cari nama, atau urutkan kolom untuk menemukan model yang tepat.
+          Klik kategori, cari nama, atau urutkan kolom untuk menemukan model Claude yang tepat.
         </p>
       </div>
 
@@ -60,12 +60,9 @@
           <button class="filter-btn" data-filter="generalist">🧠 Generalist</button>
           <button class="filter-btn" data-filter="coding">💻 Coding</button>
           <button class="filter-btn" data-filter="reasoning">⚡ Reasoning</button>
-          <button class="filter-btn" data-filter="audio">🎙️ Audio</button>
-          <button class="filter-btn" data-filter="vision">👁️ Vision / OCR</button>
-          <button class="filter-btn" data-filter="embedding">📊 Embedding</button>
         </div>
         <div class="search-group">
-          <input type="text" id="searchInput" class="search-input" placeholder="Cari model..." />
+          <input type="text" id="searchInput" class="search-input" placeholder="Cari model Claude..." />
           <button class="toggle-legacy-btn" id="toggleLegacy">Tampilkan Legacy</button>
         </div>
       </div>
@@ -76,7 +73,6 @@
           <thead>
             <tr>
               <th class="sortable" data-sort="name">Model <span class="sort-arrow">↕</span></th>
-              <th class="sortable" data-sort="params">Parameter <span class="sort-arrow">↕</span></th>
               <th class="sortable" data-sort="context">Konteks <span class="sort-arrow">↕</span></th>
               <th class="sortable" data-sort="inputPrice">Harga In <span class="sort-arrow">↕</span></th>
               <th class="sortable" data-sort="outputPrice">Harga Out <span class="sort-arrow">↕</span></th>
@@ -93,37 +89,29 @@
 
       <!-- Resources -->
       <div class="sub-resources" style="margin-top:60px;">
-        <h3 class="section-title" style="font-size:1.4rem;">Referensi <span class="accent">Resmi</span></h3>
+        <h3 class="section-title" style="font-size:1.4rem;">Referensi <span class="accent" style="color: #d97757;">Resmi</span></h3>
         <div class="resource-list" style="margin-top:20px;">
-          <a href="https://docs.mistral.ai/models/overview" target="_blank" rel="noopener" class="resource-card">
+          <a href="https://docs.anthropic.com/en/docs/models-overview" target="_blank" rel="noopener" class="resource-card">
             <span class="resource-icon">📖</span>
             <div>
-              <h3>Models Overview — Mistral Docs</h3>
+              <h3>Models Overview — Anthropic Docs</h3>
               <p>Daftar resmi seluruh model beserta spesifikasi teknis.</p>
             </div>
             <span class="resource-arrow">→</span>
           </a>
-          <a href="https://mistral.ai/pricing" target="_blank" rel="noopener" class="resource-card">
+          <a href="https://www.anthropic.com/pricing" target="_blank" rel="noopener" class="resource-card">
             <span class="resource-icon">💰</span>
             <div>
-              <h3>Pricing — Mistral AI</h3>
-              <p>Halaman harga terbaru untuk semua model API.</p>
+              <h3>Pricing — Anthropic</h3>
+              <p>Halaman harga terbaru untuk semua model API Claude.</p>
             </div>
             <span class="resource-arrow">→</span>
           </a>
-          <a href="https://huggingface.co/mistralai" target="_blank" rel="noopener" class="resource-card">
-            <span class="resource-icon">🤗</span>
+          <a href="https://openrouter.ai/models?provider=anthropic" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">🌐</span>
             <div>
-              <h3>Mistral AI — Hugging Face</h3>
-              <p>Bobot terbuka dan model untuk komunitas.</p>
-            </div>
-            <span class="resource-arrow">→</span>
-          </a>
-          <a href="https://benchlm.ai/best/mistral-models" target="_blank" rel="noopener" class="resource-card">
-            <span class="resource-icon">📊</span>
-            <div>
-              <h3>Benchmarks — BenchLM</h3>
-              <p>Peringkat model Mistral berdasarkan benchmark publik.</p>
+              <h3>Anthropic — OpenRouter</h3>
+              <p>Akses Claude API dengan integrasi pihak ketiga via OpenRouter.</p>
             </div>
             <span class="resource-arrow">→</span>
           </a>
@@ -147,14 +135,14 @@
     <div class="container">
       <p>
         <span class="logo-icon">◆</span> <strong>SeputarModelAI</strong> — Pusat komparasi model AI independen.
-        Bukan situs resmi Mistral AI.
+        Bukan situs resmi Anthropic.
       </p>
-      <p class="footer-sub">Data bersumber dari <a href="https://docs.mistral.ai/models/overview" target="_blank" rel="noopener">docs.mistral.ai</a> &amp; <a href="https://mistral.ai/pricing" target="_blank" rel="noopener">mistral.ai/pricing</a>. Dibuat Juli 2026.</p>
+      <p class="footer-sub">Data bersumber dari Anthropic Docs & OpenRouter. Dibuat Juli 2026.</p>
     </div>
   </footer>
 
   <!-- Scripts -->
-  <script src="data/models.js"></script>
-  <script src="mistral.js"></script>
+  <script src="data/anthropic_models.js"></script>
+  <script src="anthropic.js"></script>
 </body>
 </html>
