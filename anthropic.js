@@ -37,6 +37,16 @@
     return m ? parseFloat(m[1]) : 0;
   }
 
+  function getStatusMeta(status) {
+    const meta = {
+      active: { label: "Active", badgeClass: "badge-ga", legacy: false },
+      limited: { label: "Limited", badgeClass: "badge-limited", legacy: false },
+      deprecated: { label: "Deprecated", badgeClass: "badge-dep", legacy: true },
+      retired: { label: "Retired", badgeClass: "badge-retired", legacy: true }
+    };
+    return meta[status] || meta.active;
+  }
+
   /* ---------- Filter & Sort ---------- */
   function getFilteredModels() {
     let list = [...window.ANTHROPIC_MODELS];
@@ -45,7 +55,7 @@
       list = list.filter((m) => m.category === activeFilter);
     }
     if (!showLegacy) {
-      list = list.filter((m) => m.status !== "deprecated");
+      list = list.filter((m) => m.status !== "deprecated" && m.status !== "retired");
     }
     if (searchQuery) {
       const q = searchQuery.toLowerCase();
@@ -103,16 +113,13 @@
 
     tbody.innerHTML = list
       .map((m) => {
-        const isDep = m.status === "deprecated";
-        const statusBadge = isDep
-          ? '<span class="badge badge-dep">Deprecated</span>'
-          : '<span class="badge badge-ga">GA</span>';
+        const status = getStatusMeta(m.status);
         const modalities = m.modalities
           .map((mod) => `<span class="badge badge-modality">${mod}</span>`)
           .join(" ");
 
         return `
-          <tr class="${isDep ? "deprecated" : ""} fade-in">
+          <tr class="${status.legacy ? "legacy" : ""} fade-in">
             <td>
               <div class="model-name">${m.name}</div>
               <div class="model-api">${m.apiName}</div>
@@ -121,7 +128,7 @@
             <td style="font-family:var(--mono);font-size:.8rem;">${m.inputPrice}</td>
             <td style="font-family:var(--mono);font-size:.8rem;">${m.outputPrice}</td>
             <td>${modalities}</td>
-            <td>${statusBadge}</td>
+            <td><span class="badge ${status.badgeClass}">${status.label}</span></td>
             <td><button class="btn-detail" data-id="${m.id}">Detail</button></td>
           </tr>`;
       })
@@ -152,6 +159,7 @@
         <div class="meta-item"><div class="meta-label">Harga Output</div><div class="meta-value">${m.outputPrice}</div></div>
         <div class="meta-item"><div class="meta-label">Modalitas</div><div class="meta-value">${modalities}</div></div>
         <div class="meta-item"><div class="meta-label">Lisensi</div><div class="meta-value">${ow}</div></div>
+        <div class="meta-item"><div class="meta-label">Status</div><div class="meta-value">${getStatusMeta(m.status).label}</div></div>
         <div class="meta-item"><div class="meta-label">Rilis</div><div class="meta-value">${m.release}</div></div>
       </div>
       <h3 style="color: #d97757;">Keunggulan</h3>
@@ -214,7 +222,7 @@
     legacyBtn.addEventListener("click", () => {
       showLegacy = !showLegacy;
       legacyBtn.classList.toggle("active", showLegacy);
-      legacyBtn.textContent = showLegacy ? "Sembunyikan Legacy" : "Tampilkan Legacy";
+      legacyBtn.textContent = showLegacy ? "Sembunyikan model legacy" : "Tampilkan model legacy";
       renderTable();
     });
 
