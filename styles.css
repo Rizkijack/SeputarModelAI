@@ -37,6 +37,11 @@ body.provider-openai {
   --accent-dim:  #0d8a6a;
   --accent-glow: rgba(16,163,127,.15);
 }
+body.provider-anthropic {
+  --accent:      #d97757;        /* Anthropic coral */
+  --accent-dim:  #c4623f;
+  --accent-glow: rgba(217,119,87,.15);
+}
 
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
