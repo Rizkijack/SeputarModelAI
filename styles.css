@@ -78,6 +78,11 @@ body.provider-xai {
   --accent-dim:  #4f46e5;
   --accent-glow: rgba(99,102,241,.15);
 }
+body.provider-mimo {
+  --accent:      #ff6900;        /* Xiaomi MiMo orange */
+  --accent-dim:  #d95a00;
+  --accent-glow: rgba(255,105,0,.15);
+}
 
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
