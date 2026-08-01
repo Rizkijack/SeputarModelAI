@@ -1,1 +1,1 @@
-Website informattif tentang seputar model AI terbaru.
+Website informatif tentang seputar model AI terbaru.
