@@ -57,6 +57,11 @@ body.provider-zhipu {
   --accent-dim:  #7c3aed;
   --accent-glow: rgba(139,92,246,.15);
 }
+body.provider-gemini {
+  --accent:      #4285f4;        /* Google blue */
+  --accent-dim:  #2b6ed9;
+  --accent-glow: rgba(66,133,244,.15);
+}
 
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

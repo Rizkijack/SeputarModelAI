@@ -3,16 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Komparasi Model OpenAI — SeputarModelAI</title>
-  <meta name="description" content="Komparasi lengkap seluruh model OpenAI: GPT-5.6 Sol/Terra/Luna, GPT-4o, GPT-4.1, o3, o4-mini, Sora, GPT Image, Whisper, dan lainnya." />
+  <title>Komparasi Model Google Gemini — SeputarModelAI</title>
+  <meta name="description" content="Komparasi model Google Gemini: Gemini 3.6 Flash, Gemini 3.5 Flash, Gemini 3.1 Pro, Gemini 2.5 Pro/Flash, Nano Banana, Veo 3.1, dan Gemini Embedding." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="sub-page provider-openai">
+<body class="sub-page provider-gemini">
 
-  <!-- ========== NAVBAR ========== -->
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
@@ -21,64 +20,60 @@
       <div class="nav-links">
         <a href="index.html">Beranda</a>
         <a href="mistral.html">Mistral</a>
-        <a href="openai.html" class="active">OpenAI</a>
+        <a href="openai.html">OpenAI</a>
         <a href="anthropic.html">Anthropic</a>
         <a href="qwen.html">Qwen</a>
         <a href="zhipu.html">Zhipu AI</a>
         <a href="deepseek.html">Deepseek</a>
-        <a href="gemini.html">Gemini</a>
+        <a href="gemini.html" class="active">Gemini</a>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
     </div>
   </nav>
 
-  <!-- ========== SUB-PAGE HERO ========== -->
   <header class="sub-hero">
     <div class="sub-hero-bg"></div>
     <div class="container">
       <a href="index.html" class="back-link">← Kembali ke Beranda</a>
       <h1 class="sub-hero-title">
-        Komparasi <span class="accent">OpenAI</span>
+        Komparasi <span class="accent">Google Gemini</span>
       </h1>
       <p class="sub-hero-desc">
-        Dari GPT-3.5 pertama hingga GPT-5.6 Sol frontier — jelajahi, bandingkan,
-        dan pahami setiap model dalam ekosistem OpenAI.
+        Dari Gemini 3.6 Flash dan 3.1 Pro yang frontier hingga 2.5 Pro/Flash, Nano Banana,
+        Veo 3.1, dan Gemini Embedding — jelajahi model generalist, reasoning, coding,
+        image, video, audio, dan robotics dalam ekosistem Google Gemini.
       </p>
     </div>
   </header>
 
-  <!-- ========== KOMPARASI OPENAI ========== -->
-  <section class="mistral" id="openai">
+  <section class="mistral" id="gemini">
     <div class="container">
       <div class="section-head">
-        <span class="section-label">Sub-bagian · Provider #2</span>
+        <span class="section-label">Sub-bagian · Provider #7</span>
         <h2 class="section-title">Database <span class="accent">Model</span></h2>
         <p class="section-desc">
-          Klik kategori, cari nama, atau urutkan kolom untuk menemukan model yang tepat.
+          Klik kategori, cari nama, atau urutkan kolom untuk menemukan model Google Gemini yang tepat.
         </p>
       </div>
 
-      <!-- Toolbar -->
       <div class="toolbar">
         <div class="filter-group">
           <button class="filter-btn active" data-filter="all">Semua</button>
           <button class="filter-btn" data-filter="generalist">🧠 Generalist</button>
           <button class="filter-btn" data-filter="reasoning">⚡ Reasoning</button>
-          <button class="filter-btn" data-filter="coding">💻 Coding</button>
+          <button class="filter-btn" data-filter="agentic">🤖 Agentic</button>
           <button class="filter-btn" data-filter="image">🎨 Image</button>
           <button class="filter-btn" data-filter="video">🎬 Video</button>
           <button class="filter-btn" data-filter="audio">🎙️ Audio</button>
           <button class="filter-btn" data-filter="embedding">📊 Embedding</button>
-          <button class="filter-btn" data-filter="moderation">🛡️ Moderation</button>
-          <button class="filter-btn" data-filter="open-weight">🔓 Open-Weight</button>
+          <button class="filter-btn" data-filter="robotics">🦾 Robotics</button>
         </div>
         <div class="search-group">
-          <input type="text" id="searchInput" class="search-input" placeholder="Cari model..." />
+          <input type="text" id="searchInput" class="search-input" placeholder="Cari model Gemini..." />
           <button class="toggle-legacy-btn" id="toggleLegacy">Tampilkan Legacy</button>
         </div>
       </div>
 
-      <!-- Tabel -->
       <div class="table-wrap">
         <table class="compare-table" id="compareTable">
           <thead>
@@ -99,39 +94,46 @@
         </table>
       </div>
 
-      <!-- Resources -->
       <div class="sub-resources" style="margin-top:60px;">
         <h3 class="section-title" style="font-size:1.4rem;">Referensi <span class="accent">Resmi</span></h3>
         <div class="resource-list" style="margin-top:20px;">
-          <a href="https://platform.openai.com/docs/models" target="_blank" rel="noopener" class="resource-card">
-            <span class="resource-icon">📖</span>
-            <div>
-              <h3>Models — OpenAI Docs</h3>
-              <p>Dokumentasi resmi seluruh model beserta spesifikasi teknis.</p>
-            </div>
-            <span class="resource-arrow">→</span>
-          </a>
-          <a href="https://openai.com/api/pricing/" target="_blank" rel="noopener" class="resource-card">
+          <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener" class="resource-card">
             <span class="resource-icon">💰</span>
             <div>
-              <h3>Pricing — OpenAI API</h3>
-              <p>Halaman harga terbaru untuk semua model API.</p>
+              <h3>Gemini API Pricing</h3>
+              <p>Harga resmi per 1M token untuk semua model Gemini, Veo, dan Imagen.</p>
             </div>
             <span class="resource-arrow">→</span>
           </a>
-          <a href="https://platform.openai.com/docs/deprecations" target="_blank" rel="noopener" class="resource-card">
-            <span class="resource-icon">📜</span>
+          <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">📖</span>
             <div>
-              <h3>Deprecations — OpenAI Docs</h3>
-              <p>Daftar model yang sudah deprecated dan penggantinya.</p>
+              <h3>Gemini API Models</h3>
+              <p>Dokumentasi resmi model, kemampuan, konteks, dan ketersediaan.</p>
             </div>
             <span class="resource-arrow">→</span>
           </a>
-          <a href="https://github.com/openai/openai-cookbook" target="_blank" rel="noopener" class="resource-card">
-            <span class="resource-icon">📚</span>
+          <a href="https://aistudio.google.com/" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">🧪</span>
             <div>
-              <h3>OpenAI Cookbook — GitHub</h3>
-              <p>Contoh kode dan panduan praktis untuk membangun dengan OpenAI.</p>
+              <h3>Google AI Studio</h3>
+              <p>Coba model Gemini gratis langsung di browser tanpa biaya.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://cloud.google.com/vertex-ai" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">☁️</span>
+            <div>
+              <h3>Google Cloud Vertex AI</h3>
+              <p>Platform enterprise Google untuk deployment model Gemini.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://openrouter.ai/models?q=google" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">🌐</span>
+            <div>
+              <h3>Google — OpenRouter</h3>
+              <p>Harga dan metadata model Google yang tersedia melalui OpenRouter.</p>
             </div>
             <span class="resource-arrow">→</span>
           </a>
@@ -140,7 +142,7 @@
     </div>
   </section>
 
-  <!-- ========== DETAIL MODAL ========== -->
+
   <div class="modal-overlay" id="modalOverlay">
     <div class="modal" id="modal">
       <button class="modal-close" id="modalClose">&times;</button>
@@ -150,19 +152,17 @@
     </div>
   </div>
 
-  <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="container">
       <p>
         <span class="logo-icon">◆</span> <strong>SeputarModelAI</strong> — Pusat komparasi model AI independen.
-        Bukan situs resmi OpenAI.
+        Bukan situs resmi Google atau Google DeepMind.
       </p>
-      <p class="footer-sub">Data bersumber dari <a href="https://platform.openai.com/docs/models" target="_blank" rel="noopener">platform.openai.com/docs/models</a> &amp; <a href="https://openai.com/api/pricing/" target="_blank" rel="noopener">openai.com/api/pricing</a>. Dibuat Juli 2026.</p>
+      <p class="footer-sub">Data bersumber dari Google AI for Developers (Gemini API Docs), Google Cloud Vertex AI, dan OpenRouter. Snapshot 30 Juli 2026.</p>
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="data/openai-models.js"></script>
+  <script src="data/gemini-models.js"></script>
   <script src="compare.js"></script>
 </body>
 </html>
