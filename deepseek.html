@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Komparasi Model DeepSeek — SeputarModelAI</title>
+  <meta name="description" content="Komparasi model DeepSeek dari V4-Pro dan V4-Flash hosted hingga V3, R1, Coder-V2, VL2, Janus-Pro, Prover-V2 open-weight, beserta keluarga legacy." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="sub-page provider-deepseek">
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">◆</span> SeputarModel<span class="logo-accent">AI</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Beranda</a>
+        <a href="mistral.html">Mistral</a>
+        <a href="openai.html">OpenAI</a>
+        <a href="anthropic.html">Anthropic</a>
+        <a href="qwen.html">Qwen</a>
+        <a href="deepseek.html" class="active">DeepSeek</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </nav>
+
+  <header class="sub-hero">
+    <div class="sub-hero-bg"></div>
+    <div class="container">
+      <a href="index.html" class="back-link">← Kembali ke Beranda</a>
+      <h1 class="sub-hero-title">
+        Komparasi <span class="accent">DeepSeek</span>
+      </h1>
+      <p class="sub-hero-desc">
+        Dari V4-Pro dan V4-Flash yang frontier hingga V3, R1, Coder-V2, VL2, Janus-Pro, dan Prover-V2 open-weight —
+        jelajahi model generalist, reasoning, coding, dan vision dalam ekosistem DeepSeek.
+      </p>
+    </div>
+  </header>
+
+  <section class="mistral" id="deepseek">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Sub-bagian · Provider #5</span>
+        <h2 class="section-title">Database <span class="accent">Model</span></h2>
+        <p class="section-desc">
+          Klik kategori, cari nama, atau urutkan kolom untuk menemukan model DeepSeek yang tepat.
+        </p>
+      </div>
+
+      <div class="toolbar">
+        <div class="filter-group">
+          <button class="filter-btn active" data-filter="all">Semua</button>
+          <button class="filter-btn" data-filter="generalist">🧠 Generalist</button>
+          <button class="filter-btn" data-filter="coding">💻 Coding</button>
+          <button class="filter-btn" data-filter="reasoning">⚡ Reasoning</button>
+          <button class="filter-btn" data-filter="audio">🎙️ Audio</button>
+          <button class="filter-btn" data-filter="vision">👁️ Vision</button>
+          <button class="filter-btn" data-filter="embedding">📊 Embedding</button>
+        </div>
+        <div class="search-group">
+          <input type="text" id="searchInput" class="search-input" placeholder="Cari model DeepSeek..." />
+          <button class="toggle-legacy-btn" id="toggleLegacy">Tampilkan Legacy</button>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="compare-table" id="compareTable">
+          <thead>
+            <tr>
+              <th class="sortable" data-sort="name">Model <span class="sort-arrow">↕</span></th>
+              <th class="sortable" data-sort="params">Parameter <span class="sort-arrow">↕</span></th>
+              <th class="sortable" data-sort="context">Konteks <span class="sort-arrow">↕</span></th>
+              <th class="sortable" data-sort="inputPrice">Harga In <span class="sort-arrow">↕</span></th>
+              <th class="sortable" data-sort="outputPrice">Harga Out <span class="sort-arrow">↕</span></th>
+              <th>Modalitas</th>
+              <th>Status</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="compareBody">
+            <!-- diisi oleh JS -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="sub-resources" style="margin-top:60px;">
+        <h3 class="section-title" style="font-size:1.4rem;">Referensi <span class="accent">Resmi</span></h3>
+        <div class="resource-list" style="margin-top:20px;">
+          <a href="https://api-docs.deepseek.com/" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">📖</span>
+            <div>
+              <h3>DeepSeek API Docs</h3>
+              <p>Dokumentasi resmi model, pricing, thinking mode, dan endpoint API.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://platform.deepseek.com/" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">💠</span>
+            <div>
+              <h3>DeepSeek Platform</h3>
+              <p>Konsol resmi untuk API key, usage, dan billing model DeepSeek.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://huggingface.co/deepseek-ai" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">🤗</span>
+            <div>
+              <h3>DeepSeek — Hugging Face</h3>
+              <p>Checkpoint open-weight dan model card resmi DeepSeek.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://github.com/deepseek-ai" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">🐙</span>
+            <div>
+              <h3>DeepSeek — GitHub</h3>
+              <p>Kode pelatihan, inference, dan rilis teknis resmi DeepSeek.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://openrouter.ai/deepseek" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">🌐</span>
+            <div>
+              <h3>DeepSeek — OpenRouter</h3>
+              <p>Harga dan metadata model hosted yang tersedia melalui OpenRouter.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div id="modalContent">
+        <!-- diisi oleh JS -->
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>
+        <span class="logo-icon">◆</span> <strong>SeputarModelAI</strong> — Pusat komparasi model AI independen.
+        Bukan situs resmi DeepSeek.
+      </p>
+      <p class="footer-sub">Data bersumber dari DeepSeek API Docs, Hugging Face, GitHub, dan OpenRouter. Snapshot 1 Agustus 2026.</p>
+    </div>
+  </footer>
+
+  <script src="data/deepseek-models.js"></script>
+  <script src="compare.js"></script>
+</body>
+</html>
+
