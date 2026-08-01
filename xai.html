@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Komparasi Model xAI (Grok) — SeputarModelAI</title>
+  <meta name="description" content="Komparasi model xAI (Grok) dari Grok-4.5, Grok-4.3, Grok 4.20, Grok Build, hingga Grok-3, Grok-2, Grok-1 — termasuk Imagine API, Voice API, dan Embedding." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="sub-page provider-xai">
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">✦</span> SeputarModel<span class="logo-accent">AI</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Beranda</a>
+        <a href="mistral.html">Mistral</a>
+        <a href="openai.html">OpenAI</a>
+        <a href="anthropic.html">Anthropic</a>
+        <a href="qwen.html">Qwen</a>
+        <a href="zhipu.html">Zhipu AI</a>
+        <a href="deepseek.html">Deepseek</a>
+        <a href="xai.html" class="active">xAI (Grok)</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </nav>
+
+  <header class="sub-hero">
+    <div class="sub-hero-bg"></div>
+    <div class="container">
+      <a href="index.html" class="back-link">← Kembali ke Beranda</a>
+      <h1 class="sub-hero-title">
+        Komparasi <span class="accent">xAI (Grok)</span>
+      </h1>
+      <p class="sub-hero-desc">
+        Dari Grok-4.5 yang frontier hingga Grok-1 open-weight — jelajahi model generalist, reasoning, coding,
+        vision, image, video, voice, dan embedding dalam ekosistem xAI.
+      </p>
+    </div>
+  </header>
+
+  <section class="mistral" id="xai">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Sub-bagian · Provider #7</span>
+        <h2 class="section-title">Database <span class="accent">Model</span></h2>
+        <p class="section-desc">
+          Klik kategori, cari nama, atau urutkan kolom untuk menemukan model xAI (Grok) yang tepat.
+        </p>
+      </div>
+
+      <div class="toolbar">
+        <div class="filter-group">
+          <button class="filter-btn active" data-filter="all">Semua</button>
+          <button class="filter-btn" data-filter="generalist">✦ Generalist</button>
+          <button class="filter-btn" data-filter="reasoning">🧠 Reasoning</button>
+          <button class="filter-btn" data-filter="coding">💻 Coding</button>
+          <button class="filter-btn" data-filter="vision">👁 Vision</button>
+          <button class="filter-btn" data-filter="image">🖼 Image</button>
+          <button class="filter-btn" data-filter="video">🎬 Video</button>
+          <button class="filter-btn" data-filter="voice">🎙 Voice</button>
+          <button class="filter-btn" data-filter="embedding">📊 Embedding</button>
+        </div>
+        <div class="search-group">
+          <input type="text" id="searchInput" class="search-input" placeholder="Cari model xAI..." />
+          <button class="toggle-legacy-btn" id="toggleLegacy">Tampilkan Legacy</button>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+
+      <div class="sub-resources" style="margin-top:60px;">
+        <h3 class="section-title" style="font-size:1.4rem;">Referensi <span class="accent">Resmi</span></h3>
+        <div class="resource-list" style="margin-top:20px;">
+          <a href="https://docs.x.ai/" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">📚</span>
+            <div>
+              <h3>xAI API Docs</h3>
+              <p>Dokumentasi resmi model, pricing, release notes, dan migration guides.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://console.x.ai/" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">⚙️</span>
+            <div>
+              <h3>xAI Console</h3>
+              <p>Konsol resmi untuk API key, usage, billing, dan daftar model per tim.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://x.ai/news" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">📰</span>
+            <div>
+              <h3>xAI News / Announcements</h3>
+              <p>Pengumuman resmi rilis Grok-1.5V, Grok-2, Grok-3, Grok-4, dan Grok-4.5.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://github.com/xai-org" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">🐙</span>
+            <div>
+              <h3>xAI — GitHub (xai-org)</h3>
+              <p>Rilis open-weight Grok-1, Grok-1.5V, dan kode pendukung resmi xAI.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://openrouter.ai/x-ai" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">🛤️</span>
+            <div>
+              <h3>xAI — OpenRouter</h3>
+              <p>Harga dan metadata model hosted yang tersedia melalui OpenRouter.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div id="modalContent">
+        <!-- diisi oleh JS -->
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>
+        <span class="logo-icon">✦</span> <strong>SeputarModelAI</strong> — Pusat komparasi model AI independen.
+        Bukan situs resmi xAI.
+      </p>
+      <p class="footer-sub">Data bersumber dari xAI API Docs, xAI Console, xAI News, GitHub xai-org, dan OpenRouter. Snapshot 1 Agustus 2026.</p>
+    </div>
+  </footer>
+
+  <script src="data/xai-models.js"></script>
+  <script src="compare.js"></script>
+</body>
+</html>
+
+        <table class="compare-table" id="compareTable">
+          <thead>
+            <tr>
+              <th class="sortable" data-sort="name">Model <span class="sort-arrow">↕</span></th>
+              <th class="sortable" data-sort="params">Parameter <span class="sort-arrow">↕</span></th>
+              <th class="sortable" data-sort="context">Konteks <span class="sort-arrow">↕</span></th>
+              <th class="sortable" data-sort="inputPrice">Harga In <span class="sort-arrow">↕</span></th>
+              <th class="sortable" data-sort="outputPrice">Harga Out <span class="sort-arrow">↕</span></th>
+              <th>Modalitas</th>
+              <th>Status</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="compareBody">
+            <!-- diisi oleh JS -->
+          </tbody>
+        </table>
+      </div>
