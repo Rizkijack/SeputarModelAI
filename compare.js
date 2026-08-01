@@ -105,9 +105,12 @@
       .map((m) => {
         const isDep = m.status === "deprecated";
         const ow = m.openWeight ? '<span class="open-weight" title="Open-Weight">🔓</span>' : "";
-        const statusBadge = isDep
-          ? '<span class="badge badge-dep">Deprecated</span>'
-          : '<span class="badge badge-ga">GA</span>';
+        const statusBadge = {
+          "general-availability": '<span class="badge badge-ga">GA</span>',
+          preview: '<span class="badge badge-limited">Preview</span>',
+          unreleased: '<span class="badge badge-unreleased">Belum dirilis</span>',
+          deprecated: '<span class="badge badge-dep">Deprecated</span>'
+        }[m.status] || '<span class="badge badge-ga">GA</span>';
         const modalities = m.modalities
           .map((mod) => `<span class="badge badge-modality">${mod}</span>`).join(" ");
 
