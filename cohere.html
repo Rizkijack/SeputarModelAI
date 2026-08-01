@@ -3,16 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Komparasi Model OpenAI — SeputarModelAI</title>
-  <meta name="description" content="Komparasi lengkap seluruh model OpenAI: GPT-5.6 Sol/Terra/Luna, GPT-4o, GPT-4.1, o3, o4-mini, Sora, GPT Image, Whisper, dan lainnya." />
+  <title>Komparasi Model Cohere — SeputarModelAI</title>
+  <meta name="description" content="Komparasi model Cohere: Command A+ dan Command A, Command A Reasoning/Vision/Translate, Command R7B, R+, Embed v4, Rerank v4, Cohere Transcribe, dan keluarga Aya." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="sub-page provider-openai">
+<body class="sub-page provider-cohere">
 
-  <!-- ========== NAVBAR ========== -->
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
@@ -21,66 +20,58 @@
       <div class="nav-links">
         <a href="index.html">Beranda</a>
         <a href="mistral.html">Mistral</a>
-        <a href="openai.html" class="active">OpenAI</a>
+        <a href="openai.html">OpenAI</a>
         <a href="anthropic.html">Anthropic</a>
         <a href="qwen.html">Qwen</a>
         <a href="zhipu.html">Zhipu AI</a>
         <a href="deepseek.html">Deepseek</a>
         <a href="gemini.html">Gemini</a>
-        <a href="meta.html">Meta</a>
-        <a href="cohere.html">Cohere</a>
+        <a href="cohere.html" class="active">Cohere</a>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
     </div>
   </nav>
 
-  <!-- ========== SUB-PAGE HERO ========== -->
   <header class="sub-hero">
     <div class="sub-hero-bg"></div>
     <div class="container">
       <a href="index.html" class="back-link">← Kembali ke Beranda</a>
       <h1 class="sub-hero-title">
-        Komparasi <span class="accent">OpenAI</span>
+        Komparasi <span class="accent">Cohere</span>
       </h1>
       <p class="sub-hero-desc">
-        Dari GPT-3.5 pertama hingga GPT-5.6 Sol frontier — jelajahi, bandingkan,
-        dan pahami setiap model dalam ekosistem OpenAI.
+        Dari Command A+ dan Command A yang frontier hingga Command R7B yang hemat, Embed v4, Rerank v4,
+        Cohere Transcribe, dan keluarga Aya — jelajahi model generalist, reasoning, vision, embedding,
+        rerank, dan audio dalam ekosistem Cohere.
       </p>
     </div>
   </header>
 
-  <!-- ========== KOMPARASI OPENAI ========== -->
-  <section class="mistral" id="openai">
+  <section class="mistral" id="cohere">
     <div class="container">
       <div class="section-head">
-        <span class="section-label">Sub-bagian · Provider #2</span>
+        <span class="section-label">Sub-bagian · Provider #8</span>
         <h2 class="section-title">Database <span class="accent">Model</span></h2>
         <p class="section-desc">
-          Klik kategori, cari nama, atau urutkan kolom untuk menemukan model yang tepat.
+          Klik kategori, cari nama, atau urutkan kolom untuk menemukan model Cohere yang tepat.
         </p>
       </div>
 
-      <!-- Toolbar -->
       <div class="toolbar">
         <div class="filter-group">
           <button class="filter-btn active" data-filter="all">Semua</button>
           <button class="filter-btn" data-filter="generalist">🧠 Generalist</button>
           <button class="filter-btn" data-filter="reasoning">⚡ Reasoning</button>
-          <button class="filter-btn" data-filter="coding">💻 Coding</button>
-          <button class="filter-btn" data-filter="image">🎨 Image</button>
-          <button class="filter-btn" data-filter="video">🎬 Video</button>
-          <button class="filter-btn" data-filter="audio">🎙️ Audio</button>
+          <button class="filter-btn" data-filter="vision">👁️ Vision</button>
           <button class="filter-btn" data-filter="embedding">📊 Embedding</button>
-          <button class="filter-btn" data-filter="moderation">🛡️ Moderation</button>
-          <button class="filter-btn" data-filter="open-weight">🔓 Open-Weight</button>
+          <button class="filter-btn" data-filter="audio">🎙️ Audio</button>
         </div>
         <div class="search-group">
-          <input type="text" id="searchInput" class="search-input" placeholder="Cari model..." />
+          <input type="text" id="searchInput" class="search-input" placeholder="Cari model Cohere..." />
           <button class="toggle-legacy-btn" id="toggleLegacy">Tampilkan Legacy</button>
         </div>
       </div>
 
-      <!-- Tabel -->
       <div class="table-wrap">
         <table class="compare-table" id="compareTable">
           <thead>
@@ -101,39 +92,70 @@
         </table>
       </div>
 
-      <!-- Resources -->
       <div class="sub-resources" style="margin-top:60px;">
         <h3 class="section-title" style="font-size:1.4rem;">Referensi <span class="accent">Resmi</span></h3>
         <div class="resource-list" style="margin-top:20px;">
-          <a href="https://platform.openai.com/docs/models" target="_blank" rel="noopener" class="resource-card">
+          <a href="https://docs.cohere.com/docs/models" target="_blank" rel="noopener" class="resource-card">
             <span class="resource-icon">📖</span>
             <div>
-              <h3>Models — OpenAI Docs</h3>
-              <p>Dokumentasi resmi seluruh model beserta spesifikasi teknis.</p>
+              <h3>Cohere Docs — Models Overview</h3>
+              <p>Dokumentasi resmi seluruh model Cohere: Command, Embed, Rerank, Audio, dan Aya.</p>
             </div>
             <span class="resource-arrow">→</span>
           </a>
-          <a href="https://openai.com/api/pricing/" target="_blank" rel="noopener" class="resource-card">
+          <a href="https://cohere.com/pricing" target="_blank" rel="noopener" class="resource-card">
             <span class="resource-icon">💰</span>
             <div>
-              <h3>Pricing — OpenAI API</h3>
-              <p>Halaman harga terbaru untuk semua model API.</p>
+              <h3>Cohere Pricing</h3>
+              <p>Harga resmi per 1M token, Model Vault, dan harga model legacy.</p>
             </div>
             <span class="resource-arrow">→</span>
           </a>
-          <a href="https://platform.openai.com/docs/deprecations" target="_blank" rel="noopener" class="resource-card">
-            <span class="resource-icon">📜</span>
+          <a href="https://docs.cohere.com/docs/command-a-plus" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">🚀</span>
             <div>
-              <h3>Deprecations — OpenAI Docs</h3>
-              <p>Daftar model yang sudah deprecated dan penggantinya.</p>
+              <h3>Command A+ — Model Page</h3>
+              <p>Spesifikasi dan detail teknis model MoE frontier terbaru Cohere.</p>
             </div>
             <span class="resource-arrow">→</span>
           </a>
-          <a href="https://github.com/openai/openai-cookbook" target="_blank" rel="noopener" class="resource-card">
-            <span class="resource-icon">📚</span>
+          <a href="https://docs.cohere.com/docs/cohere-embed" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">🔎</span>
             <div>
-              <h3>OpenAI Cookbook — GitHub</h3>
-              <p>Contoh kode dan panduan praktis untuk membangun dengan OpenAI.</p>
+              <h3>Cohere Embed &amp; Rerank</h3>
+              <p>Detail model embedding dan reranking untuk pipeline retrieval.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://docs.cohere.com/docs/transcribe" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">🎙️</span>
+            <div>
+              <h3>Cohere Transcribe</h3>
+              <p>Model ASR open-source untuk transkripsi audio 14 bahasa.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://docs.cohere.com/docs/aya" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">🌍</span>
+            <div>
+              <h3>Aya Family</h3>
+              <p>Model multibahasa Cohere: Aya Expanse, Aya Vision, dan Tiny Aya.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://huggingface.co/CohereForAI" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">🤗</span>
+            <div>
+              <h3>Cohere — Hugging Face</h3>
+              <p>Checkpoint open-weight resmi Cohere (Command A+, R7B, Aya, Transcribe).</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://openrouter.ai/cohere" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">🌐</span>
+            <div>
+              <h3>Cohere — OpenRouter</h3>
+              <p>Harga dan metadata model Cohere yang tersedia melalui OpenRouter.</p>
             </div>
             <span class="resource-arrow">→</span>
           </a>
@@ -142,7 +164,7 @@
     </div>
   </section>
 
-  <!-- ========== DETAIL MODAL ========== -->
+
   <div class="modal-overlay" id="modalOverlay">
     <div class="modal" id="modal">
       <button class="modal-close" id="modalClose">&times;</button>
@@ -152,19 +174,17 @@
     </div>
   </div>
 
-  <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="container">
       <p>
         <span class="logo-icon">◆</span> <strong>SeputarModelAI</strong> — Pusat komparasi model AI independen.
-        Bukan situs resmi OpenAI.
+        Bukan situs resmi Cohere.
       </p>
-      <p class="footer-sub">Data bersumber dari <a href="https://platform.openai.com/docs/models" target="_blank" rel="noopener">platform.openai.com/docs/models</a> &amp; <a href="https://openai.com/api/pricing/" target="_blank" rel="noopener">openai.com/api/pricing</a>. Dibuat Juli 2026.</p>
+      <p class="footer-sub">Data bersumber dari Cohere Docs (Models Overview, Command A+, Command A, Command A Reasoning, Command A Vision, Command A Translate, Command R7B, Embed, Rerank, Transcribe, Aya) dan Cohere Pricing. Snapshot 1 Agustus 2026.</p>
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="data/openai-models.js"></script>
+  <script src="data/cohere-models.js"></script>
   <script src="compare.js"></script>
 </body>
 </html>
