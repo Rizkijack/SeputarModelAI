@@ -42,6 +42,11 @@ body.provider-anthropic {
   --accent-dim:  #c4623f;
   --accent-glow: rgba(217,119,87,.15);
 }
+body.provider-deepseek {
+  --accent:      #4d6bfe;        /* DeepSeek blue */
+  --accent-dim:  #3b56d4;
+  --accent-glow: rgba(77,107,254,.15);
+}
 
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
