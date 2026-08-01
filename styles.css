@@ -47,6 +47,16 @@ body.provider-deepseek {
   --accent-dim:  #3b56d4;
   --accent-glow: rgba(77,107,254,.15);
 }
+body.provider-qwen {
+  --accent:      #5b8def;        /* Qwen blue */
+  --accent-dim:  #4279d8;
+  --accent-glow: rgba(91,141,239,.15);
+}
+body.provider-zhipu {
+  --accent:      #8b5cf6;        /* Zhipu purple */
+  --accent-dim:  #7c3aed;
+  --accent-glow: rgba(139,92,246,.15);
+}
 
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Komparasi Model Zhipu AI — SeputarModelAI</title>
+  <meta name="description" content="Komparasi model Zhipu AI dan Z.ai: GLM-5, GLM-4.7, GLM-V, CodeGeeX, CogView, CogVideoX, GLM-OCR, dan GLM-ASR." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="sub-page provider-zhipu">
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><span class="logo-icon">◆</span> SeputarModel<span class="logo-accent">AI</span></a>
+      <div class="nav-links">
+        <a href="index.html">Beranda</a>
+        <a href="mistral.html">Mistral</a>
+        <a href="openai.html">OpenAI</a>
+        <a href="anthropic.html">Anthropic</a>
+        <a href="qwen.html">Qwen</a>
+        <a href="zhipu.html" class="active">Zhipu AI</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </nav>
+
+  <header class="sub-hero">
+    <div class="sub-hero-bg"></div>
+    <div class="container">
+      <a href="index.html" class="back-link">← Kembali ke Beranda</a>
+      <h1 class="sub-hero-title">Komparasi <span class="accent">Zhipu AI</span></h1>
+      <p class="sub-hero-desc">Jelajahi keluarga GLM dari Z.ai — reasoning, coding agent, vision, OCR, audio, image generation, dan video generation.</p>
+    </div>
+  </header>
+
+  <section class="mistral" id="zhipu">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Sub-bagian · Provider #5</span>
+        <h2 class="section-title">Database <span class="accent">Model</span></h2>
+        <p class="section-desc">Klik kategori, cari nama, atau urutkan kolom untuk menemukan model Zhipu AI yang tepat.</p>
+      </div>
+
+      <div class="toolbar">
+        <div class="filter-group">
+          <button class="filter-btn active" data-filter="all">Semua</button>
+          <button class="filter-btn" data-filter="generalist">🧠 Generalist</button>
+          <button class="filter-btn" data-filter="coding">💻 Coding</button>
+          <button class="filter-btn" data-filter="reasoning">⚡ Reasoning</button>
+          <button class="filter-btn" data-filter="audio">🎙️ Audio</button>
+          <button class="filter-btn" data-filter="vision">👁️ Vision / OCR</button>
+          <button class="filter-btn" data-filter="image">🎨 Image</button>
+          <button class="filter-btn" data-filter="video">🎬 Video</button>
+        </div>
+        <div class="search-group">
+          <input type="text" id="searchInput" class="search-input" placeholder="Cari model Zhipu..." />
+          <button class="toggle-legacy-btn" id="toggleLegacy">Tampilkan Legacy</button>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="compare-table" id="compareTable">
+          <thead><tr>
+            <th class="sortable" data-sort="name">Model <span class="sort-arrow">↕</span></th>
+            <th class="sortable" data-sort="params">Parameter <span class="sort-arrow">↕</span></th>
+            <th class="sortable" data-sort="context">Konteks <span class="sort-arrow">↕</span></th>
+            <th class="sortable" data-sort="inputPrice">Harga In <span class="sort-arrow">↕</span></th>
+            <th class="sortable" data-sort="outputPrice">Harga Out <span class="sort-arrow">↕</span></th>
+            <th>Modalitas</th><th>Status</th><th>Aksi</th>
+          </tr></thead>
+          <tbody id="compareBody"></tbody>
+        </table>
+      </div>
+
+      <div class="sub-resources" style="margin-top:60px;">
+        <h3 class="section-title" style="font-size:1.4rem;">Referensi <span class="accent">Resmi</span></h3>
+        <div class="resource-list" style="margin-top:20px;">
+          <a href="https://docs.z.ai/" target="_blank" rel="noopener" class="resource-card"><span class="resource-icon">📖</span><div><h3>Z.AI Developer Documentation</h3><p>Dokumentasi resmi model, API, dan kemampuan Z.ai.</p></div><span class="resource-arrow">→</span></a>
+          <a href="https://docs.z.ai/guides/overview/pricing" target="_blank" rel="noopener" class="resource-card"><span class="resource-icon">💰</span><div><h3>Pricing — Z.AI</h3><p>Harga resmi model teks, vision, gambar, video, dan audio.</p></div><span class="resource-arrow">→</span></a>
+          <a href="https://huggingface.co/zai-org" target="_blank" rel="noopener" class="resource-card"><span class="resource-icon">🤗</span><div><h3>Z.ai — Hugging Face</h3><p>Checkpoint open-weight GLM, CodeGeeX, CogView, dan CogVideoX.</p></div><span class="resource-arrow">→</span></a>
+          <a href="https://openrouter.ai/models?q=z-ai" target="_blank" rel="noopener" class="resource-card"><span class="resource-icon">🌐</span><div><h3>Z.ai — OpenRouter</h3><p>Harga, konteks, modality, dan endpoint hosted terbaru.</p></div><span class="resource-arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal-overlay" id="modalOverlay"><div class="modal" id="modal"><button class="modal-close" id="modalClose">&times;</button><div id="modalContent"></div></div></div>
+
+  <footer class="footer"><div class="container">
+    <p><span class="logo-icon">◆</span> <strong>SeputarModelAI</strong> — Pusat komparasi model AI independen. Bukan situs resmi Zhipu AI atau Z.ai.</p>
+    <p class="footer-sub">Data bersumber dari dokumentasi dan pricing resmi Z.AI, Hugging Face, dan OpenRouter. Snapshot 1 Agustus 2026.</p>
+  </div></footer>
+
+  <script src="data/zhipu-models.js"></script>
+  <script src="compare.js"></script>
+</body>
+</html>
