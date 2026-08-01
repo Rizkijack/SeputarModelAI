@@ -57,6 +57,11 @@ body.provider-zhipu {
   --accent-dim:  #7c3aed;
   --accent-glow: rgba(139,92,246,.15);
 }
+body.provider-meta {
+  --accent:      #0668e1;        /* Meta blue */
+  --accent-dim:  #0551af;
+  --accent-glow: rgba(6,104,225,.15);
+}
 
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -433,6 +438,7 @@ body.sub-page { padding-top: 0; }
 .badge-ga { background: rgba(34,197,94,.12); color: var(--green); border: 1px solid rgba(34,197,94,.25); }
 .badge-limited { background: rgba(245,158,11,.12); color: var(--accent); border: 1px solid rgba(245,158,11,.25); }
 .badge-dep { background: rgba(239,68,68,.12); color: var(--red); border: 1px solid rgba(239,68,68,.25); }
+.badge-unreleased { background: rgba(148,163,184,.12); color: var(--text-dim); border: 1px solid rgba(148,163,184,.25); }
 .badge-retired { background: rgba(148,163,184,.12); color: var(--text-dim); border: 1px solid rgba(148,163,184,.25); }
 .badge-modality { background: var(--bg-card); border: 1px solid var(--border); color: var(--text-dim); margin: 2px; }
 .open-weight { color: var(--green); margin-left: 6px; font-size: .75rem; }

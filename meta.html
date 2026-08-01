@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Komparasi Model Meta — SeputarModelAI</title>
+  <meta name="description" content="Komparasi model Meta: Llama 4 Scout, Llama 4 Maverick, Llama 4 Behemoth, Muse Spark, dan Muse Spark 1.1." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="sub-page provider-meta">
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><span class="logo-icon">◆</span> SeputarModel<span class="logo-accent">AI</span></a>
+      <div class="nav-links">
+        <a href="index.html">Beranda</a>
+        <a href="mistral.html">Mistral</a>
+        <a href="openai.html">OpenAI</a>
+        <a href="anthropic.html">Anthropic</a>
+        <a href="qwen.html">Qwen</a>
+        <a href="zhipu.html">Zhipu AI</a>
+        <a href="deepseek.html">Deepseek</a>
+        <a href="meta.html" class="active">Meta</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </nav>
+
+  <header class="sub-hero">
+    <div class="sub-hero-bg"></div>
+    <div class="container">
+      <a href="index.html" class="back-link">← Kembali ke Beranda</a>
+      <h1 class="sub-hero-title">Komparasi <span class="accent">Meta</span></h1>
+      <p class="sub-hero-desc">Jelajahi model Llama 4 dan keluarga Muse Spark — dari model open-weight multimodal hingga reasoning agentic dengan computer use.</p>
+    </div>
+  </header>
+
+  <section class="mistral" id="meta">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Sub-bagian · Provider #7</span>
+        <h2 class="section-title">Database <span class="accent">Model</span></h2>
+        <p class="section-desc">Klik kategori, cari nama, atau urutkan kolom untuk menemukan model Meta yang tepat. Model preview dan yang belum dirilis diberi status khusus.</p>
+      </div>
+
+      <div class="toolbar">
+        <div class="filter-group">
+          <button class="filter-btn active" data-filter="all">Semua</button>
+          <button class="filter-btn" data-filter="generalist">🧠 Generalist</button>
+          <button class="filter-btn" data-filter="reasoning">⚡ Reasoning</button>
+          <button class="filter-btn" data-filter="agentic">🤖 Agentic</button>
+        </div>
+        <div class="search-group">
+          <input type="text" id="searchInput" class="search-input" placeholder="Cari model Meta..." />
+          <button class="toggle-legacy-btn" id="toggleLegacy">Tampilkan Legacy</button>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="compare-table" id="compareTable">
+          <thead><tr>
+            <th class="sortable" data-sort="name">Model <span class="sort-arrow">↕</span></th>
+            <th class="sortable" data-sort="params">Parameter <span class="sort-arrow">↕</span></th>
+            <th class="sortable" data-sort="context">Konteks <span class="sort-arrow">↕</span></th>
+            <th class="sortable" data-sort="inputPrice">Harga In <span class="sort-arrow">↕</span></th>
+            <th class="sortable" data-sort="outputPrice">Harga Out <span class="sort-arrow">↕</span></th>
+            <th>Modalitas</th><th>Status</th><th>Aksi</th>
+          </tr></thead>
+          <tbody id="compareBody"></tbody>
+        </table>
+      </div>
+
+      <div class="sub-resources" style="margin-top:60px;">
+        <h3 class="section-title" style="font-size:1.4rem;">Referensi <span class="accent">Resmi Meta</span></h3>
+        <div class="resource-list" style="margin-top:20px;">
+          <a href="https://developer.meta.com/ai/models/llama-4/" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">🦙</span>
+            <div><h3>Llama 4 — Meta Developer</h3><p>Overview resmi Llama 4, kemampuan, benchmark, dan download model.</p></div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://ai.meta.com/blog/llama-4-multimodal-intelligence/" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">📖</span>
+            <div><h3>Pengumuman Llama 4</h3><p>Detail arsitektur, parameter, multimodalitas, dan konteks resmi dari Meta.</p></div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://developer.meta.com/ai/llama-downloads/" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">⬇️</span>
+            <div><h3>Llama Downloads</h3><p>Halaman resmi untuk mengunduh model Llama yang tersedia.</p></div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://developer.meta.com/ai/models/muse-spark/" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">✨</span>
+            <div><h3>Muse Spark — Meta Developer</h3><p>Overview, benchmark, dan kemampuan agentic Muse Spark.</p></div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://ai.meta.com/blog/introducing-muse-spark-msl/" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">🧠</span>
+            <div><h3>Pengumuman Muse Spark</h3><p>Riset resmi Meta tentang reasoning multimodal dan personal superintelligence.</p></div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">⚙️</span>
+            <div><h3>Pengumuman Muse Spark 1.1</h3><p>Detail resmi peningkatan coding, computer use, tool use, dan konteks 1M.</p></div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://developer.meta.com/ai/products/meta-model-api/" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">🔌</span>
+            <div><h3>Meta Model API</h3><p>Portal resmi akses model API Meta untuk developer.</p></div>
+            <span class="resource-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p><span class="logo-icon">◆</span> <strong>SeputarModelAI</strong> — Pusat komparasi model AI independen. Bukan situs resmi Meta.</p>
+      <p class="footer-sub">Data bersumber dari halaman model dan pengumuman resmi Meta. Snapshot 1 Agustus 2026.</p>
+    </div>
+  </footer>
+
+  <script src="data/meta-models.js"></script>
+  <script src="compare.js"></script>
+</body>
+</html>
