@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Komparasi Model Xiaomi MiMo — SeputarModelAI</title>
+  <meta name="description" content="Komparasi 20 model Xiaomi MiMo dari MiMo-V2.5-Pro, MiMo-V2.5, V2-Pro, V2-Omni, V2-Flash, hingga keluarga open-weight MiMo-7B, MiMo-VL-7B, MiMo-Audio, ASR, dan TTS." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="sub-page provider-mimo">
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">✦</span> SeputarModel<span class="logo-accent">AI</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Beranda</a>
+        <a href="mistral.html">Mistral</a>
+        <a href="openai.html">OpenAI</a>
+        <a href="anthropic.html">Anthropic</a>
+        <a href="qwen.html">Qwen</a>
+        <a href="zhipu.html">Zhipu AI</a>
+        <a href="deepseek.html">Deepseek</a>
+        <a href="gemini.html">Gemini</a>
+        <a href="meta.html">Meta</a>
+        <a href="cohere.html">Cohere</a>
+        <a href="xai.html">xAI (Grok)</a>
+        <a href="mimo.html" class="active">Xiaomi MiMo</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </nav>
+
+  <header class="sub-hero">
+    <div class="sub-hero-bg"></div>
+    <div class="container">
+      <a href="index.html" class="back-link">← Kembali ke Beranda</a>
+      <h1 class="sub-hero-title">
+        Komparasi <span class="accent">Xiaomi MiMo</span>
+      </h1>
+      <p class="sub-hero-desc">
+        Dari MiMo-V2.5-Pro (1.02T) yang frontier hingga keluarga open-weight 7B — jelajahi model generalist, agentic, reasoning, coding, vision, audio, speech, dan embodied dalam ekosistem MiMo Xiaomi.
+      </p>
+    </div>
+  </header>
+
+  <section class="mistral" id="mimo">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Sub-bagian · Provider #11</span>
+        <h2 class="section-title">Database <span class="accent">Model</span></h2>
+        <p class="section-desc">
+          Klik kategori, cari nama, atau urutkan kolom untuk menemukan model Xiaomi MiMo yang tepat.
+        </p>
+      </div>
+
+      <div class="toolbar">
+        <div class="filter-group">
+          <button class="filter-btn active" data-filter="all">Semua</button>
+          <button class="filter-btn" data-filter="generalist">✦ Generalist</button>
+          <button class="filter-btn" data-filter="reasoning">🧠 Reasoning</button>
+          <button class="filter-btn" data-filter="coding">💻 Coding</button>
+          <button class="filter-btn" data-filter="vision">👁️ Vision</button>
+          <button class="filter-btn" data-filter="audio">🎵 Audio</button>
+          <button class="filter-btn" data-filter="speech">🎙️ Speech</button>
+          <button class="filter-btn" data-filter="embodied">🤖 Embodied</button>
+        </div>
+        <div class="search-group">
+          <input type="text" id="searchInput" class="search-input" placeholder="Cari model Xiaomi MiMo..." />
+          <button class="toggle-legacy-btn" id="toggleLegacy">Tampilkan Legacy</button>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="compare-table" id="compareTable">
+          <thead>
+            <tr>
+              <th class="sortable" data-sort="name">Model <span class="sort-arrow">↕</span></th>
+              <th class="sortable" data-sort="params">Parameter <span class="sort-arrow">↕</span></th>
+              <th class="sortable" data-sort="context">Konteks <span class="sort-arrow">↕</span></th>
+              <th class="sortable" data-sort="inputPrice">Harga In <span class="sort-arrow">↕</span></th>
+              <th class="sortable" data-sort="outputPrice">Harga Out <span class="sort-arrow">↕</span></th>
+              <th>Modalitas</th>
+              <th>Status</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="compareBody">
+            <!-- diisi oleh JS -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="sub-resources" style="margin-top:60px;">
+        <h3 class="section-title" style="font-size:1.4rem;">Referensi <span class="accent">Resmi</span></h3>
+        <div class="resource-list" style="margin-top:20px;">
+          <a href="https://mimo.xiaomi.com" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">🏠</span>
+            <div>
+              <h3>Xiaomi MiMo — Situs Resmi</h3>
+              <p>Portal resmi produk, blog, paper, dan pengumuman model keluarga MiMo.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://openrouter.ai/models?q=xiaomi" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">🌐</span>
+            <div>
+              <h3>Xiaomi — OpenRouter</h3>
+              <p>Harga dan metadata model hosted MiMo-V2.5 & V2.5-Pro yang tersedia lewat OpenRouter.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://huggingface.co/XiaomiMiMo" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">🤗</span>
+            <div>
+              <h3>XiaomiMiMo — Hugging Face</h3>
+              <p>Repo open-weight resmi: MiMo-V2.5, V2.5-Pro, V2-Flash, 7B, VL, Audio, ASR, dan Embodied.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://github.com/XiaomiMiMo" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">🐙</span>
+            <div>
+              <h3>Xiaomi MiMo — GitHub</h3>
+              <p>Kode pendukung, technical report, dan informasi rilis open-source MiMo.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://www.xiaomimimo.com" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">📰</span>
+            <div>
+              <h3>MiMo News / Blog</h3>
+              <p>Pengumuman resmi MiMo-V2.5 Series, V2-Pro, V2-Omni, ASR, dan TTS.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div id="modalContent">
+        <!-- diisi oleh JS -->
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>
+        <span class="logo-icon">✦</span> <strong>SeputarModelAI</strong> — Pusat komparasi model AI independen.
+        Bukan situs resmi Xiaomi.
+      </p>
+      <p class="footer-sub">Data bersumber dari mimo.xiaomi.com, OpenRouter (xiaomi), dan Hugging Face (XiaomiMiMo). Snapshot 2 Agustus 2026.</p>
+    </div>
+  </footer>
+
+  <script src="data/mimo-models.js"></script>
+  <script src="compare.js"></script>
+</body>
+</html>
