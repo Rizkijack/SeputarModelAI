@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Komparasi Model OpenAI — SeputarModelAI</title>
+  <meta name="description" content="Komparasi lengkap seluruh model OpenAI: GPT-5.6 Sol/Terra/Luna, GPT-4o, GPT-4.1, o3, o4-mini, Sora, GPT Image, Whisper, dan lainnya." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="sub-page provider-openai">
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">◆</span> SeputarModel<span class="logo-accent">AI</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Beranda</a>
+        <a href="mistral.html">Mistral</a>
+        <a href="openai.html" class="active">OpenAI</a>
+        <a href="anthropic.html">Anthropic</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- ========== SUB-PAGE HERO ========== -->
+  <header class="sub-hero">
+    <div class="sub-hero-bg"></div>
+    <div class="container">
+      <a href="index.html" class="back-link">← Kembali ke Beranda</a>
+      <h1 class="sub-hero-title">
+        Komparasi <span class="accent">OpenAI</span>
+      </h1>
+      <p class="sub-hero-desc">
+        Dari GPT-3.5 pertama hingga GPT-5.6 Sol frontier — jelajahi, bandingkan,
+        dan pahami setiap model dalam ekosistem OpenAI.
+      </p>
+    </div>
+  </header>
+
+  <!-- ========== KOMPARASI OPENAI ========== -->
+  <section class="mistral" id="openai">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Sub-bagian · Provider #2</span>
+        <h2 class="section-title">Database <span class="accent">Model</span></h2>
+        <p class="section-desc">
+          Klik kategori, cari nama, atau urutkan kolom untuk menemukan model yang tepat.
+        </p>
+      </div>
+
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <div class="filter-group">
+          <button class="filter-btn active" data-filter="all">Semua</button>
+          <button class="filter-btn" data-filter="generalist">🧠 Generalist</button>
+          <button class="filter-btn" data-filter="reasoning">⚡ Reasoning</button>
+          <button class="filter-btn" data-filter="coding">💻 Coding</button>
+          <button class="filter-btn" data-filter="image">🎨 Image</button>
+          <button class="filter-btn" data-filter="video">🎬 Video</button>
+          <button class="filter-btn" data-filter="audio">🎙️ Audio</button>
+          <button class="filter-btn" data-filter="embedding">📊 Embedding</button>
+          <button class="filter-btn" data-filter="moderation">🛡️ Moderation</button>
+          <button class="filter-btn" data-filter="open-weight">🔓 Open-Weight</button>
+        </div>
+        <div class="search-group">
+          <input type="text" id="searchInput" class="search-input" placeholder="Cari model..." />
+          <button class="toggle-legacy-btn" id="toggleLegacy">Tampilkan Legacy</button>
+        </div>
+      </div>
+
+      <!-- Tabel -->
+      <div class="table-wrap">
+        <table class="compare-table" id="compareTable">
+          <thead>
+            <tr>
+              <th class="sortable" data-sort="name">Model <span class="sort-arrow">↕</span></th>
+              <th class="sortable" data-sort="params">Parameter <span class="sort-arrow">↕</span></th>
+              <th class="sortable" data-sort="context">Konteks <span class="sort-arrow">↕</span></th>
+              <th class="sortable" data-sort="inputPrice">Harga In <span class="sort-arrow">↕</span></th>
+              <th class="sortable" data-sort="outputPrice">Harga Out <span class="sort-arrow">↕</span></th>
+              <th>Modalitas</th>
+              <th>Status</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="compareBody">
+            <!-- diisi oleh JS -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Resources -->
+      <div class="sub-resources" style="margin-top:60px;">
+        <h3 class="section-title" style="font-size:1.4rem;">Referensi <span class="accent">Resmi</span></h3>
+        <div class="resource-list" style="margin-top:20px;">
+          <a href="https://platform.openai.com/docs/models" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">📖</span>
+            <div>
+              <h3>Models — OpenAI Docs</h3>
+              <p>Dokumentasi resmi seluruh model beserta spesifikasi teknis.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://openai.com/api/pricing/" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">💰</span>
+            <div>
+              <h3>Pricing — OpenAI API</h3>
+              <p>Halaman harga terbaru untuk semua model API.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://platform.openai.com/docs/deprecations" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">📜</span>
+            <div>
+              <h3>Deprecations — OpenAI Docs</h3>
+              <p>Daftar model yang sudah deprecated dan penggantinya.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://github.com/openai/openai-cookbook" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">📚</span>
+            <div>
+              <h3>OpenAI Cookbook — GitHub</h3>
+              <p>Contoh kode dan panduan praktis untuk membangun dengan OpenAI.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DETAIL MODAL ========== -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div id="modalContent">
+        <!-- diisi oleh JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        <span class="logo-icon">◆</span> <strong>SeputarModelAI</strong> — Pusat komparasi model AI independen.
+        Bukan situs resmi OpenAI.
+      </p>
+      <p class="footer-sub">Data bersumber dari <a href="https://platform.openai.com/docs/models" target="_blank" rel="noopener">platform.openai.com/docs/models</a> &amp; <a href="https://openai.com/api/pricing/" target="_blank" rel="noopener">openai.com/api/pricing</a>. Dibuat Juli 2026.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data/openai-models.js"></script>
+  <script src="compare.js"></script>
+</body>
+</html>

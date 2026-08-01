@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SeputarModelAI — Pusat Komparasi Model AI</title>
-  <meta name="description" content="SeputarModelAI — pusat komparasi model AI. Pelajari seluruh model Mistral AI: Large 3, Medium 3.5, Small 4, Devstral 2, Magistral, Voxtral, dan lainnya." />
+  <meta name="description" content="SeputarModelAI — pusat komparasi model kecerdasan buatan. Pelajari dan bandingkan model dari Mistral AI, OpenAI, Anthropic, Alibaba Qwen, Zhipu, dan lainnya." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
@@ -15,19 +15,21 @@
   <!-- ========== NAVBAR ========== -->
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
-      <a href="#" class="nav-logo">
+      <a href="index.html" class="nav-logo">
         <span class="logo-icon">◆</span> SeputarModel<span class="logo-accent">AI</span>
       </a>
       <div class="nav-links">
-        <a href="#hero">Beranda</a>
-        <a href="#mistral">Komparasi Mistral</a>
-        <a href="#resources">Sumber</a>
+        <a href="index.html" class="active">Beranda</a>
+        <a href="mistral.html">Mistral</a>
+        <a href="openai.html">OpenAI</a>
+        <a href="anthropic.html">Anthropic</a>
+        <a href="qwen.html">Qwen</a>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
     </div>
   </nav>
 
-  <!-- ========== HERO BARU (Memukau) ========== -->
+  <!-- ========== HERO ========== -->
   <header class="hero" id="hero">
     <div class="hero-bg">
       <div class="hero-grid"></div>
@@ -45,16 +47,12 @@
         <span class="hero-gradient">Model AI</span>
       </h1>
       <p class="hero-sub">
-        Pusat komparasi model kecerdasan buatan. Pahami setiap arsitektur,
-        bandingkan parameter &amp; harga, dan temukan model yang tepat untukmu —
-        mulai dari ekosistem <strong>Mistral AI</strong>.
+        Pusat komparasi model kecerdasan buatan terlengkap.
+        Pahami setiap arsitektur, bandingkan parameter &amp; harga,
+        dan temukan model yang tepat untuk kebutuhanmu.
       </p>
-      <div class="hero-stats" id="heroStats">
-        <!-- diisi oleh JS -->
-      </div>
       <div class="hero-cta-group">
-        <a href="#mistral" class="hero-cta primary">Jelajahi Komparasi Mistral ↓</a>
-        <a href="#resources" class="hero-cta secondary">Sumber Resmi</a>
+        <a href="#providers" class="hero-cta primary">Lihat Semua Provider ↓</a>
       </div>
     </div>
 
@@ -64,106 +62,130 @@
     </div>
   </header>
 
-  <!-- ========== KOMPARASI MISTRAL (Sub-bagian) ========== -->
-  <section class="mistral" id="mistral">
+  <!-- ========== PENJELASAN UMUM ========== -->
+  <section class="about" id="about">
     <div class="container">
-      <div class="section-head">
-        <span class="section-label">Sub-bagian · Provider #1</span>
-        <h2 class="section-title">Komparasi <span class="accent">Mistral AI</span></h2>
-        <p class="section-desc">
-          Dari Mixtral 8x7B pertama hingga Large 3 frontier — jelajahi, bandingkan,
-          dan pahami setiap model dalam ekosistem Mistral AI. Klik kategori, cari nama,
-          atau urutkan kolom untuk menemukan model yang tepat.
-        </p>
-      </div>
-
-      <!-- Toolbar -->
-      <div class="toolbar">
-        <div class="filter-group">
-          <button class="filter-btn active" data-filter="all">Semua</button>
-          <button class="filter-btn" data-filter="generalist">🧠 Generalist</button>
-          <button class="filter-btn" data-filter="coding">💻 Coding</button>
-          <button class="filter-btn" data-filter="reasoning">⚡ Reasoning</button>
-          <button class="filter-btn" data-filter="audio">🎙️ Audio</button>
-          <button class="filter-btn" data-filter="vision">👁️ Vision / OCR</button>
-          <button class="filter-btn" data-filter="embedding">📊 Embedding</button>
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="section-label">Tentang</span>
+          <h2 class="section-title">Apa Itu <span class="accent">Model AI</span>?</h2>
+          <p>
+            Model AI (Artificial Intelligence) adalah program komputer yang dilatih
+            dengan data dalam skala besar untuk memahami, memproses, dan menghasilkan
+            teks, gambar, audio, maupun kode. Model-model ini menjadi fondasi dari
+            chatbot, asisten virtual, alat coding, dan banyak lagi.
+          </p>
+          <p>
+            Setiap <strong>provider</strong> (penyedia) memiliki pendekatan berbeda
+            dalam membangun model — mulai dari ukuran parameter, arsitektur MoE,
+            kemampuan multimodal, hingga model reasoning khusus. Di sini kami
+            menyajikan komparasi menyeluruh agar kamu bisa membuat keputusan
+            yang tepat.
+          </p>
         </div>
-        <div class="search-group">
-          <input type="text" id="searchInput" class="search-input" placeholder="Cari model..." />
-          <button class="toggle-legacy-btn" id="toggleLegacy">Tampilkan Legacy</button>
+        <div class="about-visual">
+          <div class="about-card">
+            <div class="about-card-icon">🧠</div>
+            <h3>Generalist</h3>
+            <p>Model serbaguna untuk percakapan, analisis, dan penulisan.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">💻</div>
+            <h3>Coding</h3>
+            <p>Model spesialis untuk generasi dan review kode program.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">⚡</div>
+            <h3>Reasoning</h3>
+            <p>Model yang mampu berpikir langkah demi langkah secara eksplisit.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">🎙️</div>
+            <h3>Multimodal</h3>
+            <p>Model yang memproses teks, gambar, audio, dan dokumen.</p>
+          </div>
         </div>
-      </div>
-
-      <!-- Tabel -->
-      <div class="table-wrap">
-        <table class="compare-table" id="compareTable">
-          <thead>
-            <tr>
-              <th class="sortable" data-sort="name">Model <span class="sort-arrow">↕</span></th>
-              <th class="sortable" data-sort="params">Parameter <span class="sort-arrow">↕</span></th>
-              <th class="sortable" data-sort="context">Konteks <span class="sort-arrow">↕</span></th>
-              <th class="sortable" data-sort="inputPrice">Harga In <span class="sort-arrow">↕</span></th>
-              <th class="sortable" data-sort="outputPrice">Harga Out <span class="sort-arrow">↕</span></th>
-              <th>Modalitas</th>
-              <th>Status</th>
-              <th>Aksi</th>
-            </tr>
-          </thead>
-          <tbody id="compareBody">
-            <!-- diisi oleh JS -->
-          </tbody>
-        </table>
       </div>
     </div>
   </section>
 
-  <!-- ========== DETAIL MODAL ========== -->
-  <div class="modal-overlay" id="modalOverlay">
-    <div class="modal" id="modal">
-      <button class="modal-close" id="modalClose">&times;</button>
-      <div id="modalContent">
-        <!-- diisi oleh JS -->
-      </div>
-    </div>
-  </div>
-
-  <!-- ========== RESOURCES ========== -->
-  <section class="resources" id="resources">
+  <!-- ========== PROVIDER GRID (Direct Links) ========== -->
+  <section class="providers" id="providers">
     <div class="container">
-      <span class="section-label">Sumber</span>
-      <h2 class="section-title">Referensi &amp; <span class="accent">Tautan Resmi</span></h2>
-      <div class="resource-list">
-        <a href="https://docs.mistral.ai/models/overview" target="_blank" rel="noopener" class="resource-card">
-          <span class="resource-icon">📖</span>
-          <div>
-            <h3>Models Overview — Mistral Docs</h3>
-            <p>Daftar resmi seluruh model beserta spesifikasi teknis.</p>
+      <div class="section-head-center">
+        <span class="section-label">Komparasi</span>
+        <h2 class="section-title">Pilih <span class="accent">Provider</span></h2>
+        <p class="section-desc">
+          Klik provider untuk melihat komparasi lengkap seluruh model yang tersedia.
+          Provider baru akan ditambahkan secara berkala.
+        </p>
+      </div>
+
+      <div class="provider-grid">
+        <!-- Mistral AI — SUDAH ADA -->
+        <a href="mistral.html" class="provider-card available">
+          <div class="provider-logo">◆</div>
+          <div class="provider-info">
+            <h3>Mistral AI</h3>
+            <p>55 model · Generalist, Coding, Reasoning, Audio, Vision, OCR, Embedding, Moderation</p>
           </div>
-          <span class="resource-arrow">→</span>
+          <div class="provider-badge">Live</div>
+          <span class="provider-arrow">→</span>
         </a>
-        <a href="https://mistral.ai/pricing" target="_blank" rel="noopener" class="resource-card">
-          <span class="resource-icon">💰</span>
-          <div>
-            <h3>Pricing — Mistral AI</h3>
-            <p>Halaman harga terbaru untuk semua model API.</p>
+
+        <!-- OpenAI — SUDAH ADA -->
+        <a href="openai.html" class="provider-card available">
+          <div class="provider-logo">🟢</div>
+          <div class="provider-info">
+            <h3>OpenAI</h3>
+            <p>44 model · Generalist, Reasoning, Coding, Image, Video, Audio, Embedding, Moderation, Open-Weight</p>
           </div>
-          <span class="resource-arrow">→</span>
+          <div class="provider-badge">Live</div>
+          <span class="provider-arrow">→</span>
         </a>
-        <a href="https://huggingface.co/mistralai" target="_blank" rel="noopener" class="resource-card">
-          <span class="resource-icon">🤗</span>
-          <div>
-            <h3>Mistral AI — Hugging Face</h3>
-            <p>Bobot terbuka dan model untuk komunitas.</p>
+
+        <!-- Anthropic — SUDAH ADA -->
+        <a href="anthropic.html" class="provider-card available">
+          <div class="provider-logo">🟠</div>
+          <div class="provider-info">
+            <h3>Anthropic</h3>
+            <p>31 model · Claude 5, Claude 4.x, Claude 3.x, Claude 2, Claude 1 &amp; Claude Instant</p>
           </div>
-          <span class="resource-arrow">→</span>
+          <div class="provider-badge">Live</div>
+          <span class="provider-arrow">→</span>
         </a>
-        <a href="https://benchlm.ai/best/mistral-models" target="_blank" rel="noopener" class="resource-card">
-          <span class="resource-icon">📊</span>
-          <div>
-            <h3>Benchmarks — BenchLM</h3>
-            <p>Peringkat model Mistral berdasarkan benchmark publik.</p>
+
+        <!-- Alibaba Qwen — SUDAH ADA -->
+        <a href="qwen.html" class="provider-card available">
+          <div class="provider-logo">🔵</div>
+          <div class="provider-info">
+            <h3>Alibaba · Qwen</h3>
+            <p>45 model · Qwen3.7, Qwen3, Qwen3-Coder, Qwen3-VL, Qwen3-Omni, Qwen2.5, Embedding &amp; Audio</p>
           </div>
-          <span class="resource-arrow">→</span>
+          <div class="provider-badge">Live</div>
+          <span class="provider-arrow">→</span>
+        </a>
+
+        <!-- Zhipu — SEGERA HADIR -->
+        <a href="#" class="provider-card coming" onclick="return false;">
+          <div class="provider-logo">🟣</div>
+          <div class="provider-info">
+            <h3>Zhipu AI</h3>
+            <p>GLM-4, GLM-4V, CodeGeeX, CogView</p>
+          </div>
+          <div class="provider-badge coming-badge">Segera</div>
+          <span class="provider-arrow">→</span>
+        </a>
+
+        <!-- Placeholder — LAINNYA -->
+        <a href="#" class="provider-card coming more" onclick="return false;">
+          <div class="provider-logo">⋯</div>
+          <div class="provider-info">
+            <h3>Provider Lainnya</h3>
+            <p>Google Gemini, Meta Llama, xAI Grok, DeepSeek, Cohere, dan lainnya</p>
+          </div>
+          <div class="provider-badge coming-badge">Segera</div>
+          <span class="provider-arrow">→</span>
         </a>
       </div>
     </div>
@@ -174,14 +196,11 @@
     <div class="container">
       <p>
         <span class="logo-icon">◆</span> <strong>SeputarModelAI</strong> — Pusat komparasi model AI independen.
-        Bukan situs resmi Mistral AI.
       </p>
-      <p class="footer-sub">Data bersumber dari <a href="https://docs.mistral.ai/models/overview" target="_blank" rel="noopener">docs.mistral.ai</a> &amp; <a href="https://mistral.ai/pricing" target="_blank" rel="noopener">mistral.ai/pricing</a>. Dibuat Juli 2026.</p>
+      <p class="footer-sub">Dibuat Juli 2026. Data bersumber dari dokumentasi resmi masing-masing provider.</p>
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="data/models.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
