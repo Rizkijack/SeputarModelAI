@@ -3,6 +3,14 @@
    Sumber resmi: https://docs.x.ai (Models & Pricing, Model Detail Pages,
    Release Notes, Migration Guides), https://x.ai/news, dan arsip resmi
    docs.x.ai untuk model yang telah di-retire (15 Mei 2026).
+   - Docs "Models" diperbarui 9 Juli 2026; "Pricing" diperbarui 3 Juli 2026
+     (grok-4.5 $2/$6 @500K, grok-4.3 & grok-4.20 $1.25/$2.50 @1M,
+     grok-build-0.1 $1/$2 @256K, long-context ≥200K +100% input/output).
+   - OpenRouter (https://openrouter.ai/x-ai, API snapshot 1 Agu 2026):
+     27 model terdaftar; slug aktif x-ai/grok-4.5, x-ai/grok-build-0.1,
+     x-ai/grok-4.3, x-ai/grok-4.20-multi-agent (2M ctx), x-ai/grok-4.20 (2M),
+     plus alias x-ai/grok-latest; media models (Grok STT 1.0, Imagine,
+     Voice TTS) di-endpoint khusus.
    Snapshot: 1 Agustus 2026.
    ========================================================================== */
 
@@ -455,7 +463,7 @@ const XAI_MODELS = [
     tagline: "Banyak agen berkolaborasi paralel untuk riset mendalam (deep research).",
     strengths: ["Kolaborasi multi-agent paralel", "Konteks 1M token", "Deep research", "Function calling"],
     bestFor: "Deep research, sintesis multi-sumber, dan tugas yang butuh eksplorasi paralel.",
-    story: "Grok 4.20 Multi-Agent (beta) memungkinkan beberapa agen berkolaborasi secara paralel untuk menangani tugas riset mendalam. Bekerja tanpa built-in tools — agen mengandalkan pengetahuan kolektif dan reasoning untuk menghasilkan respons."
+    story: "Grok 4.20 Multi-Agent (beta) memungkinkan beberapa agen berkolaborasi secara paralel untuk menangani tugas riset mendalam. Bekerja tanpa built-in tools — agen mengandalkan pengetahuan kolektif dan reasoning untuk menghasilkan respons. Slug resmi grok-4.20-multi-agent-0309 (1M konteks per docs.x.ai); OpenRouter mencatat slug x-ai/grok-4.20-multi-agent dengan context 2M dan harga $1.25/$2.50."
   },
   /* ====================== GROK 4.3 (2026) ====================== */
   {
@@ -496,7 +504,7 @@ const XAI_MODELS = [
     modalities: ["Teks", "Vision"],
     openWeight: false,
     status: "general-availability",
-    release: "2026-06",
+    release: "2026-05",
     tagline: "Model coding cerdas untuk software engineering agentic dan workflow.",
     strengths: ["Agentic coding & web dev", "256K konteks", "Harga $1.00/$2.00", "Function calling & structured outputs", "Alias grok-code-fast-1"],
     bestFor: "Agen coding, Grok Build CLI, pengembangan web, dan otomasi workflow engineering.",
@@ -523,7 +531,28 @@ const XAI_MODELS = [
     tagline: "Model flagship untuk coding, tugas agentic, dan knowledge work — paling cerdas & tercepat.",
     strengths: ["Reasoning configurable (low/medium/high)", "Konteks 500K", "Halusinasi minimal", "Agentic tool calling", "Knowledge cutoff 1 Feb 2026"],
     bestFor: "Coding frontier, agen kompleks, analisis dokumen besar, dan semua tugas utama.",
-    story: "Dirilis 8 Juli 2026, dilatih di data center SpaceXAI Memphis dengan dataset baru sains, engineering, dan matematika. Harga $2.00 input / $6.00 output per 1M token (naik ke $4/$12 untuk prompt ≥ 200K token), reasoning configurable dengan default high. Tersedia di API, Grok Build, Cursor, dan berbagai model gateway."
+    story: "Dirilis 8 Juli 2026, dilatih di data center SpaceXAI Memphis dengan dataset baru sains, engineering, dan matematika. Harga $2.00 input / $6.00 output per 1M token (naik ke $4/$12 untuk prompt ≥ 200K token), reasoning configurable dengan default high. Tersedia di API, Grok Build, Cursor, dan berbagai model gateway. Alias grok-4.5-latest mengarah ke model ini."
+  },
+  {
+    id: "grok-latest",
+    family: "Grok Latest",
+    name: "Grok Latest",
+    apiName: "grok-latest (alias)",
+    version: "latest",
+    category: "generalist",
+    categoryLabel: "Alias / Terbaru",
+    params: "Proprietary",
+    context: "500K tokens",
+    inputPrice: "$2.00",
+    outputPrice: "$6.00",
+    modalities: ["Teks", "Vision"],
+    openWeight: false,
+    status: "general-availability",
+    release: "2026-07",
+    tagline: "Alias OpenRouter yang selalu mengarah ke model Grok terbaru dari xAI.",
+    strengths: ["Redirect otomatis ke model terbaru", "Konteks 500K", "Harga mengikuti model tujuan (kini grok-4.5)", "Direkomendasikan untuk auto-upgrade"],
+    bestFor: "Aplikasi yang ingin selalu memakai Grok terbaru tanpa perubahan kode.",
+    story: "Terdaftar di OpenRouter (x-ai/grok-latest, 8 Juli 2026) sebagai alias yang selalu me-redirect ke model Grok terbaru — saat ini grok-4.5. Konteks 500K dan harga mengikuti model tujuan. Cocok untuk workflow yang ingin auto-upgrade ke versi frontier terbaru xAI."
   },
   /* ====================== IMAGINE API (GAMBAR & VIDEO) ====================== */
   {
@@ -629,7 +658,7 @@ const XAI_MODELS = [
     tagline: "Generasi video 1080p native: text-to-video, image-to-video, dan reference-to-video.",
     strengths: ["1080p native (T2V & I2V)", "Reference-to-video + preset voices", "Video editing & extension", "Harga $0.080/detik"],
     bestFor: "Produksi video sinematik, iklan, dan konten premium resolusi tinggi.",
-    story: "Dirilis 31 Juli 2026 (pembaruan modalitas) — grok-imagine-video-1.5 mendukung text-to-video, image-to-video, dan reference-to-video dengan native 1080p untuk T2V/I2V, termasuk preset voices opsional. Harga $0.080 per detik."
+    story: "Dirilis 31 Juli 2026 (pembaruan modalitas) — grok-imagine-video-1.5 mendukung text-to-video, image-to-video, dan reference-to-video dengan native 1080p untuk T2V/I2V, termasuk preset voices opsional (hingga 3 voice via reference_audios). Harga $0.080 per detik. Di OpenRouter tersedia sejak 20 Juli 2026 (mulai $0.08/detik)."
   },
   /* ====================== VOICE API (SPEECH) ====================== */
   {
@@ -672,7 +701,28 @@ const XAI_MODELS = [
     tagline: "Voice Think Fast terbaru dengan kualitas percakapan lebih natural.",
     strengths: ["Speech-to-Speech real-time", "$0.08/menit audio", "Kualitas & inteligensi lebih baik", "grok-voice-latest mulai 5 Agu 2026"],
     bestFor: "Asisten voice premium dan aplikasi percakapan real-time berkualitas tinggi.",
-    story: "Dirilis 29 Juli 2026. grok-voice-latest mulai mengarah ke model ini sejak 5 Agustus 2026. Harga $0.08 per menit audio dan $0.004 per 1K token teks input."
+    story: "Dirilis 29 Juli 2026. grok-voice-latest mulai mengarah ke model ini sejak 5 Agustus 2026. Harga $0.08 per menit audio ($4.80/jam) dan $0.004 per 1K token teks input."
+  },
+  {
+    id: "grok-voice-latest",
+    family: "Grok Voice",
+    name: "Grok Voice Latest",
+    apiName: "grok-voice-latest (alias)",
+    version: "latest",
+    category: "voice",
+    categoryLabel: "Voice / Alias Terbaru",
+    params: "Proprietary",
+    context: "—",
+    inputPrice: "$0.004 / 1K teks",
+    outputPrice: "$0.08 / menit",
+    modalities: ["Audio", "Teks"],
+    openWeight: false,
+    status: "general-availability",
+    release: "2026-01",
+    tagline: "Alias resmi Voice API yang selalu menunjuk ke model speech-to-speech terbaru.",
+    strengths: ["Auto-upgrade model voice terbaik", "Kini → grok-voice-think-fast-2.0", "Harga mengikuti model tujuan", "Direkomendasikan xAI untuk prod"],
+    bestFor: "Aplikasi voice real-time yang ingin otomatis memakai model speech terbaru.",
+    story: "Alias resmi xAI: awalnya menunjuk ke grok-voice-think-fast-1.0 dan beralih ke grok-voice-think-fast-2.0 sejak 5 Agustus 2026. Harga mengikuti model tujuan ($0.08/menit audio, $0.004/1K token teks input). xAI merekomendasikan memakai alias ini untuk pengalaman voice terbaik."
   },
   {
     id: "grok-transcribe",
@@ -693,7 +743,7 @@ const XAI_MODELS = [
     tagline: "Transkripsi audio ke teks: batch (REST) dan streaming real-time.",
     strengths: ["Batch $0.10/jam", "Streaming $0.20/jam", "12 format audio", "Word-level timestamps & multichannel"],
     bestFor: "Transkripsi meeting, subtitle, call center, dan asisten real-time.",
-    story: "Speech-to-Text xAI mentranskripsikan file audio lewat satu panggilan API atau streaming real-time via WebSocket. Mendukung 12 format audio, word-level timestamps, transkripsi multichannel, dan text formatting. Harga $0.10/jam (REST) dan $0.20/jam (streaming)."
+    story: "Speech-to-Text xAI mentranskripsikan file audio lewat satu panggilan API atau streaming real-time via WebSocket. Mendukung 12 format audio, word-level timestamps, transkripsi multichannel, dan text formatting. Harga $0.10/jam (REST) dan $0.20/jam (streaming). Di OpenRouter terdaftar sebagai Grok STT 1.0 (sejak 23 Juli 2026) via endpoint /v1/stt."
   },
   {
     id: "grok-text-to-speech",

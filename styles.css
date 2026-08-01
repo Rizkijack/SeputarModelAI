@@ -73,6 +73,11 @@ body.provider-meta {
   --accent-dim:  #0551af;
   --accent-glow: rgba(6,104,225,.15);
 }
+body.provider-xai {
+  --accent:      #6366f1;        /* xAI indigo */
+  --accent-dim:  #4f46e5;
+  --accent-glow: rgba(99,102,241,.15);
+}
 
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
