@@ -62,6 +62,11 @@ body.provider-gemini {
   --accent-dim:  #2b6ed9;
   --accent-glow: rgba(66,133,244,.15);
 }
+body.provider-cohere {
+  --accent:      #39594d;        /* Cohere green (sage) */
+  --accent-dim:  #2d473e;
+  --accent-glow: rgba(57,89,77,.18);
+}
 
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
