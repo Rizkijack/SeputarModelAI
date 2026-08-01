@@ -1,10 +1,10 @@
-# ◆ MistralKompare
+# ◆ Seputar Model AI
 
-**Website komparasi seluruh model Mistral AI** — tayang live di Vercel.
+**Website komparasi seluruh model AI** — tayang live di Vercel.
 
 ## 📋 Tentang
 
-MistralKompare adalah website statis yang menampilkan komparasi komprehensif seluruh model Mistral AI, meliputi:
+ Seputar Model AI adalah website statis yang menampilkan komparasi komprehensif seluruh model AI, meliputi:
 
 | Kategori | Model |
 |----------|-------|
