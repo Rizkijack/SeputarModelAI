@@ -78,6 +78,11 @@ body.provider-xai {
   --accent-dim:  #4f46e5;
   --accent-glow: rgba(99,102,241,.15);
 }
+body.provider-moonshot {
+  --accent:      #14b8a6;        /* Moonshot / Kimi teal */
+  --accent-dim:  #0f766e;
+  --accent-glow: rgba(20,184,166,.15);
+}
 
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

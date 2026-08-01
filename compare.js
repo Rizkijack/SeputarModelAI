@@ -43,7 +43,11 @@
   function getFilteredModels() {
     let list = [...(window.PROVIDER_MODELS || [])];
     if (activeFilter !== "all") {
-      list = list.filter((m) => m.category === activeFilter);
+      const filterButton = document.querySelector(`.filter-btn[data-filter="${activeFilter}"]`);
+      const filterProperty = filterButton && filterButton.dataset.filterProperty;
+      list = filterProperty
+        ? list.filter((m) => Boolean(m[filterProperty]))
+        : list.filter((m) => m.category === activeFilter);
     }
     if (!showLegacy) {
       list = list.filter((m) => m.status !== "deprecated");
@@ -157,6 +161,8 @@
         <div class="meta-item"><div class="meta-label">Modalitas</div><div class="meta-value">${modalities}</div></div>
         <div class="meta-item"><div class="meta-label">Lisensi</div><div class="meta-value">${ow}</div></div>
         <div class="meta-item"><div class="meta-label">Rilis</div><div class="meta-value">${m.release}</div></div>
+        ${m.cachePrice ? `<div class="meta-item"><div class="meta-label">Harga Cache Hit</div><div class="meta-value">${m.cachePrice}</div></div>` : ""}
+        ${m.sourceUrl ? `<div class="meta-item"><div class="meta-label">Sumber</div><div class="meta-value"><a href="${m.sourceUrl}" target="_blank" rel="noopener">${m.source || "Dokumentasi"}</a></div></div>` : ""}
       </div>
       <h3>Keunggulan</h3>
       <ul class="strength-list">${strengths}</ul>

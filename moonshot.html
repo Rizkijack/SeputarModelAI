@@ -3,19 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Komparasi Model xAI (Grok) — SeputarModelAI</title>
-  <meta name="description" content="Komparasi 36 model xAI (Grok) dari Grok-4.5, Grok Latest, Grok-4.3, Grok 4.20, Grok Build, hingga Grok-3, Grok-2, Grok-1 — termasuk Imagine API, Voice API, dan Embedding." />
+  <title>Komparasi Model Moonshot AI / Kimi — SeputarModelAI</title>
+  <meta name="description" content="Komparasi 21 model Moonshot AI dan Kimi: Kimi K3, K2.7 Code, K2.6, K2.5, Moonshot V1, model deprecated, dan model open-weight." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="sub-page provider-xai">
+<body class="sub-page provider-moonshot">
 
+  <!-- ========== NAVBAR ========== -->
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <span class="logo-icon">✦</span> SeputarModel<span class="logo-accent">AI</span>
+        <span class="logo-icon">🌙</span> SeputarModel<span class="logo-accent">AI</span>
       </a>
       <div class="nav-links">
         <a href="index.html">Beranda</a>
@@ -28,54 +29,56 @@
         <a href="gemini.html">Gemini</a>
         <a href="meta.html">Meta</a>
         <a href="cohere.html">Cohere</a>
-        <a href="xai.html" class="active">xAI (Grok)</a>
-        <a href="moonshot.html">Moonshot AI</a>
+        <a href="xai.html">xAI (Grok)</a>
+        <a href="moonshot.html" class="active">Moonshot AI</a>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
     </div>
   </nav>
 
+  <!-- ========== SUB-PAGE HERO ========== -->
   <header class="sub-hero">
     <div class="sub-hero-bg"></div>
     <div class="container">
       <a href="index.html" class="back-link">← Kembali ke Beranda</a>
       <h1 class="sub-hero-title">
-        Komparasi <span class="accent">xAI (Grok)</span>
+        Komparasi <span class="accent">Moonshot AI / Kimi</span>
       </h1>
       <p class="sub-hero-desc">
-        Dari Grok-4.5 yang frontier hingga Grok-1 open-weight — jelajahi model generalist, reasoning, coding, vision, image, video, voice, dan embedding dalam ekosistem xAI.
+        Dari Kimi K3 dengan context 1M hingga Moonshot V1 dan model open-weight —
+        jelajahi reasoning, coding, multimodal, vision, serta model legacy dalam ekosistem Moonshot AI.
       </p>
     </div>
   </header>
 
-  <section class="mistral" id="xai">
+  <!-- ========== KOMPARASI MOONSHOT AI ========== -->
+  <section class="mistral" id="moonshot">
     <div class="container">
       <div class="section-head">
-        <span class="section-label">Sub-bagian · Provider #7</span>
+        <span class="section-label">Sub-bagian · Provider #11</span>
         <h2 class="section-title">Database <span class="accent">Model</span></h2>
         <p class="section-desc">
-          Klik kategori, cari nama, atau urutkan kolom untuk menemukan model xAI (Grok) yang tepat.
+          Klik kategori, cari nama, atau urutkan kolom untuk membandingkan model Kimi dan Moonshot V1.
         </p>
       </div>
 
+      <!-- Toolbar -->
       <div class="toolbar">
         <div class="filter-group">
           <button class="filter-btn active" data-filter="all">Semua</button>
-          <button class="filter-btn" data-filter="generalist">✦ Generalist</button>
-          <button class="filter-btn" data-filter="reasoning">🧠 Reasoning</button>
+          <button class="filter-btn" data-filter="generalist">🧠 Generalist</button>
+          <button class="filter-btn" data-filter="reasoning">⚡ Reasoning</button>
           <button class="filter-btn" data-filter="coding">💻 Coding</button>
           <button class="filter-btn" data-filter="vision">👁️ Vision</button>
-          <button class="filter-btn" data-filter="image">🖼️ Image</button>
-          <button class="filter-btn" data-filter="video">🎬 Video</button>
-          <button class="filter-btn" data-filter="voice">🎙️ Voice</button>
-          <button class="filter-btn" data-filter="embedding">📊 Embedding</button>
+          <button class="filter-btn" data-filter="open-weight" data-filter-property="openWeight">🔓 Open-Weight</button>
         </div>
         <div class="search-group">
-          <input type="text" id="searchInput" class="search-input" placeholder="Cari model xAI..." />
+          <input type="text" id="searchInput" class="search-input" placeholder="Cari model Moonshot/Kimi..." />
           <button class="toggle-legacy-btn" id="toggleLegacy">Tampilkan Legacy</button>
         </div>
       </div>
 
+      <!-- Tabel -->
       <div class="table-wrap">
         <table class="compare-table" id="compareTable">
           <thead>
@@ -96,46 +99,47 @@
         </table>
       </div>
 
+      <!-- Resources -->
       <div class="sub-resources" style="margin-top:60px;">
-        <h3 class="section-title" style="font-size:1.4rem;">Referensi <span class="accent">Resmi</span></h3>
+        <h3 class="section-title" style="font-size:1.4rem;">Referensi <span class="accent">Resmi &amp; Kredibel</span></h3>
         <div class="resource-list" style="margin-top:20px;">
-          <a href="https://docs.x.ai/" target="_blank" rel="noopener" class="resource-card">
-            <span class="resource-icon">📚</span>
+          <a href="https://platform.kimi.ai/docs/models" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">📋</span>
             <div>
-              <h3>xAI API Docs</h3>
-              <p>Dokumentasi resmi model, pricing, release notes, dan migration guides.</p>
+              <h3>Kimi API — Model List</h3>
+              <p>Daftar model API resmi, termasuk model aktif dan deprecated.</p>
             </div>
             <span class="resource-arrow">→</span>
           </a>
-          <a href="https://console.x.ai/" target="_blank" rel="noopener" class="resource-card">
-            <span class="resource-icon">⚙️</span>
+          <a href="https://platform.kimi.ai/docs/pricing/chat" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">💰</span>
             <div>
-              <h3>xAI Console</h3>
-              <p>Konsol resmi untuk API key, usage, billing, dan daftar model per tim.</p>
+              <h3>Kimi API — Pricing</h3>
+              <p>Penjelasan billing token dan tautan harga per keluarga model.</p>
             </div>
             <span class="resource-arrow">→</span>
           </a>
-          <a href="https://x.ai/news" target="_blank" rel="noopener" class="resource-card">
-            <span class="resource-icon">📰</span>
+          <a href="https://platform.kimi.ai/" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">📖</span>
             <div>
-              <h3>xAI News / Announcements</h3>
-              <p>Pengumuman resmi rilis Grok-1.5V, Grok-2, Grok-3, Grok-4, dan Grok-4.5.</p>
+              <h3>Kimi API Platform</h3>
+              <p>Dokumentasi, quickstart, API reference, dan akses resmi Kimi.</p>
             </div>
             <span class="resource-arrow">→</span>
           </a>
-          <a href="https://github.com/xai-org" target="_blank" rel="noopener" class="resource-card">
-            <span class="resource-icon">🐙</span>
+          <a href="https://www.moonshot.ai/" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">🌙</span>
             <div>
-              <h3>xAI — GitHub (xai-org)</h3>
-              <p>Rilis open-weight Grok-1, Grok-1.5V, dan kode pendukung resmi xAI.</p>
+              <h3>Moonshot AI</h3>
+              <p>Website resmi Moonshot AI dan pengumuman keluarga Kimi.</p>
             </div>
             <span class="resource-arrow">→</span>
           </a>
-          <a href="https://openrouter.ai/x-ai" target="_blank" rel="noopener" class="resource-card">
+          <a href="https://openrouter.ai/moonshotai" target="_blank" rel="noopener" class="resource-card">
             <span class="resource-icon">🌐</span>
             <div>
-              <h3>xAI — OpenRouter</h3>
-              <p>Harga dan metadata model hosted yang tersedia melalui OpenRouter.</p>
+              <h3>MoonshotAI — OpenRouter</h3>
+              <p>Cross-check metadata, model weights, dan ketersediaan aggregator.</p>
             </div>
             <span class="resource-arrow">→</span>
           </a>
@@ -144,7 +148,7 @@
     </div>
   </section>
 
-
+  <!-- ========== DETAIL MODAL ========== -->
   <div class="modal-overlay" id="modalOverlay">
     <div class="modal" id="modal">
       <button class="modal-close" id="modalClose">&times;</button>
@@ -154,17 +158,19 @@
     </div>
   </div>
 
+  <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="container">
       <p>
-        <span class="logo-icon">✦</span> <strong>SeputarModelAI</strong> — Pusat komparasi model AI independen.
-        Bukan situs resmi xAI.
+        <span class="logo-icon">🌙</span> <strong>SeputarModelAI</strong> — Pusat komparasi model AI independen.
+        Bukan situs resmi Moonshot AI atau Kimi.
       </p>
-      <p class="footer-sub">Data bersumber dari xAI API Docs, xAI Console, xAI News, GitHub xai-org, dan OpenRouter. Snapshot 1 Agustus 2026.</p>
+      <p class="footer-sub">Data bersumber dari Kimi API Platform, Moonshot AI, dan OpenRouter. Snapshot 2 Agustus 2026.</p>
     </div>
   </footer>
 
-  <script src="data/xai-models.js"></script>
+  <!-- Scripts -->
+  <script src="data/moonshot-models.js"></script>
   <script src="compare.js"></script>
 </body>
 </html>
