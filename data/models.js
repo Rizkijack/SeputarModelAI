@@ -259,6 +259,7 @@ const MISTRAL_MODELS = [
     release: "2026-03",
     tagline: "Agen kode untuk pembuktian formal Lean 4 & theorem proving otomatis.",
     strengths: ["Khusus Lean 4 formal proof", "Automated theorem proving", "Domain sangat spesifik", "Hasil Labs Mistral"],
+    bestFor: "Pembuktian formal Lean 4, riset matematika, dan verifikasi teorema otomatis.",
     story: "Leanstral adalah produk Mistral Labs yang sangat nis — ia membantu ahli matematika menulis dan memverifikasi pembuktian formal di Lean 4."
   },
 

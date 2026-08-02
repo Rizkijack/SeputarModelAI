@@ -1,4 +1,5 @@
 .vercel
 .commandcode/
 .gemini/
-PekerjaanAgents/
+PekerjaanAgents/node_modules/
+coverage/

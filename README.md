@@ -25,6 +25,16 @@
 - **Responsif** — tampil bagus di mobile & desktop
 - **Tema gelap** — dengan aksen amber khas Mistral
 
+## 🧪 Menjalankan Test
+
+Unit test memakai [Vitest](https://vitest.dev) + jsdom (hanya untuk pengembangan; situs tetap statis tanpa build step).
+
+```bash
+npm install
+npm test           # jalankan semua test
+npm run coverage   # test + laporan coverage
+```
+
 ## 🚀 Deploy ke Vercel
 
 ### Opsi 1: CLI
