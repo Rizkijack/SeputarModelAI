@@ -2,3 +2,5 @@
 .commandcode/
 .gemini/
 PekerjaanAgents/
+# Vercel deployment artifacts
+deploy.json
