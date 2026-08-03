@@ -42,6 +42,57 @@ body.provider-anthropic {
   --accent-dim:  #c4623f;
   --accent-glow: rgba(217,119,87,.15);
 }
+body.provider-deepseek {
+  --accent:      #4d6bfe;        /* DeepSeek blue */
+  --accent-dim:  #3b56d4;
+  --accent-glow: rgba(77,107,254,.15);
+}
+body.provider-qwen {
+  --accent:      #5b8def;        /* Qwen blue */
+  --accent-dim:  #4279d8;
+  --accent-glow: rgba(91,141,239,.15);
+}
+body.provider-zhipu {
+  --accent:      #8b5cf6;        /* Zhipu purple */
+  --accent-dim:  #7c3aed;
+  --accent-glow: rgba(139,92,246,.15);
+}
+body.provider-gemini {
+  --accent:      #4285f4;        /* Google blue */
+  --accent-dim:  #2b6ed9;
+  --accent-glow: rgba(66,133,244,.15);
+}
+body.provider-cohere {
+  --accent:      #39594d;        /* Cohere green (sage) */
+  --accent-dim:  #2d473e;
+  --accent-glow: rgba(57,89,77,.18);
+}
+
+body.provider-meta {
+  --accent:      #0668e1;        /* Meta blue */
+  --accent-dim:  #0551af;
+  --accent-glow: rgba(6,104,225,.15);
+}
+body.provider-xai {
+  --accent:      #6366f1;        /* xAI indigo */
+  --accent-dim:  #4f46e5;
+  --accent-glow: rgba(99,102,241,.15);
+}
+body.provider-mimo {
+  --accent:      #ff6900;        /* Xiaomi MiMo orange */
+  --accent-dim:  #d95a00;
+  --accent-glow: rgba(255,105,0,.15);
+}
+body.provider-moonshot {
+  --accent:      #14b8a6;        /* Moonshot / Kimi teal */
+  --accent-dim:  #0f766e;
+  --accent-glow: rgba(20,184,166,.15);
+}
+body.provider-minimax {
+  --accent:      #7c5bf0;        /* MiniMax violet */
+  --accent-dim:  #6344d4;
+  --accent-glow: rgba(124,91,240,.15);
+}
 
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -71,20 +122,22 @@ img { max-width: 100%; display: block; }
 }
 .navbar.scrolled { background: rgba(10,10,12,.92); }
 .nav-inner {
-  max-width: 1200px; margin: 0 auto; padding: 0 24px;
-  display: flex; align-items: center; justify-content: space-between;
+  max-width: 1200px; margin: 0 auto; padding: 0 24px 0 12px;
+  display: flex; align-items: center; justify-content: flex-start;
   height: 64px;
 }
 .nav-logo {
   font-family: var(--font-disp);
-  font-weight: 700; font-size: 1.2rem; color: var(--text-bright);
-  display: flex; align-items: center; gap: 6px;
+  font-weight: 700; font-size: 1.4rem; color: var(--text-bright);
+  display: flex; align-items: center; gap: 8px;
+  flex-shrink: 0;
 }
-.logo-icon { color: var(--accent); font-size: 1.3rem; }
+.logo-icon { color: var(--accent); font-size: 1.5rem; }
 .logo-accent { color: var(--accent); }
-.nav-links { display: flex; gap: 28px; }
+.nav-links { display: flex; gap: 20px; margin-left: 32px; }
 .nav-links a {
-  color: var(--text-dim); font-size: .875rem; font-weight: 500;
+  color: var(--text-dim); font-size: .78rem; font-weight: 500;
+  white-space: nowrap;
   transition: color var(--transition);
 }
 .nav-links a:hover { color: var(--text-bright); }
@@ -92,6 +145,7 @@ img { max-width: 100%; display: block; }
 .nav-toggle {
   display: none; background: none; border: none;
   color: var(--text); font-size: 1.5rem; cursor: pointer;
+  margin-left: auto;
 }
 
 /* ============================================================
@@ -418,6 +472,7 @@ body.sub-page { padding-top: 0; }
 .badge-ga { background: rgba(34,197,94,.12); color: var(--green); border: 1px solid rgba(34,197,94,.25); }
 .badge-limited { background: rgba(245,158,11,.12); color: var(--accent); border: 1px solid rgba(245,158,11,.25); }
 .badge-dep { background: rgba(239,68,68,.12); color: var(--red); border: 1px solid rgba(239,68,68,.25); }
+.badge-unreleased { background: rgba(148,163,184,.12); color: var(--text-dim); border: 1px solid rgba(148,163,184,.25); }
 .badge-retired { background: rgba(148,163,184,.12); color: var(--text-dim); border: 1px solid rgba(148,163,184,.25); }
 .badge-modality { background: var(--bg-card); border: 1px solid var(--border); color: var(--text-dim); margin: 2px; }
 .open-weight { color: var(--green); margin-left: 6px; font-size: .75rem; }

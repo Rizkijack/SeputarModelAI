@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Komparasi Model Alibaba Qwen — SeputarModelAI</title>
-  <meta name="description" content="Komparasi model Alibaba Qwen dari Qwen2.5 hingga Qwen3.7, termasuk model open-weight, coding, vision, audio, embedding, dan agent." />
+  <title>Komparasi Model Google Gemini — SeputarModelAI</title>
+  <meta name="description" content="Komparasi model Google Gemini: Gemini 3.6 Flash, Gemini 3.5 Flash, Gemini 3.1 Pro, Gemini 2.5 Pro/Flash, Nano Banana, Veo 3.1, dan Gemini Embedding." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="sub-page provider-qwen">
+<body class="sub-page provider-gemini">
 
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
@@ -22,10 +22,10 @@
         <a href="mistral.html">Mistral</a>
         <a href="openai.html">OpenAI</a>
         <a href="anthropic.html">Anthropic</a>
-        <a href="qwen.html" class="active">Qwen</a>
+        <a href="qwen.html">Qwen</a>
         <a href="zhipu.html">Zhipu AI</a>
         <a href="deepseek.html">Deepseek</a>
-        <a href="gemini.html">Gemini</a>
+        <a href="gemini.html" class="active">Gemini</a>
         <a href="meta.html">Meta</a>
         <a href="cohere.html">Cohere</a>
         <a href="xai.html">xAI (Grok)</a>
@@ -43,22 +43,23 @@
     <div class="container">
       <a href="index.html" class="back-link">← Kembali ke Beranda</a>
       <h1 class="sub-hero-title">
-        Komparasi <span class="accent">Alibaba Qwen</span>
+        Komparasi <span class="accent">Google Gemini</span>
       </h1>
       <p class="sub-hero-desc">
-        Dari Qwen2.5 yang open-weight hingga Qwen3.7-Max untuk agen frontier —
-        jelajahi model generalist, coding, vision, audio, embedding, dan reasoning dalam ekosistem Qwen.
+        Dari Gemini 3.6 Flash dan 3.1 Pro yang frontier hingga 2.5 Pro/Flash, Nano Banana,
+        Veo 3.1, dan Gemini Embedding — jelajahi model generalist, reasoning, coding,
+        image, video, audio, dan robotics dalam ekosistem Google Gemini.
       </p>
     </div>
   </header>
 
-  <section class="mistral" id="qwen">
+  <section class="mistral" id="gemini">
     <div class="container">
       <div class="section-head">
-        <span class="section-label">Sub-bagian · Provider #4</span>
+        <span class="section-label">Sub-bagian · Provider #7</span>
         <h2 class="section-title">Database <span class="accent">Model</span></h2>
         <p class="section-desc">
-          Klik kategori, cari nama, atau urutkan kolom untuk menemukan model Qwen yang tepat.
+          Klik kategori, cari nama, atau urutkan kolom untuk menemukan model Google Gemini yang tepat.
         </p>
       </div>
 
@@ -66,14 +67,16 @@
         <div class="filter-group">
           <button class="filter-btn active" data-filter="all">Semua</button>
           <button class="filter-btn" data-filter="generalist">🧠 Generalist</button>
-          <button class="filter-btn" data-filter="coding">💻 Coding</button>
           <button class="filter-btn" data-filter="reasoning">⚡ Reasoning</button>
+          <button class="filter-btn" data-filter="agentic">🤖 Agentic</button>
+          <button class="filter-btn" data-filter="image">🎨 Image</button>
+          <button class="filter-btn" data-filter="video">🎬 Video</button>
           <button class="filter-btn" data-filter="audio">🎙️ Audio</button>
-          <button class="filter-btn" data-filter="vision">👁️ Vision</button>
           <button class="filter-btn" data-filter="embedding">📊 Embedding</button>
+          <button class="filter-btn" data-filter="robotics">🦾 Robotics</button>
         </div>
         <div class="search-group">
-          <input type="text" id="searchInput" class="search-input" placeholder="Cari model Qwen..." />
+          <input type="text" id="searchInput" class="search-input" placeholder="Cari model Gemini..." />
           <button class="toggle-legacy-btn" id="toggleLegacy">Tampilkan Legacy</button>
         </div>
       </div>
@@ -101,43 +104,43 @@
       <div class="sub-resources" style="margin-top:60px;">
         <h3 class="section-title" style="font-size:1.4rem;">Referensi <span class="accent">Resmi</span></h3>
         <div class="resource-list" style="margin-top:20px;">
-          <a href="https://qwen.ai/" target="_blank" rel="noopener" class="resource-card">
-            <span class="resource-icon">🧠</span>
+          <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">💰</span>
             <div>
-              <h3>Qwen AI</h3>
-              <p>Pengumuman dan informasi resmi keluarga Qwen.</p>
+              <h3>Gemini API Pricing</h3>
+              <p>Harga resmi per 1M token untuk semua model Gemini, Veo, dan Imagen.</p>
             </div>
             <span class="resource-arrow">→</span>
           </a>
-          <a href="https://www.alibabacloud.com/help/en/model-studio/models" target="_blank" rel="noopener" class="resource-card">
-            <span class="resource-icon">☁️</span>
-            <div>
-              <h3>Models — Alibaba Cloud Model Studio</h3>
-              <p>Model ID hosted, kemampuan, dan endpoint resmi Qwen.</p>
-            </div>
-            <span class="resource-arrow">→</span>
-          </a>
-          <a href="https://qwenlm.github.io/" target="_blank" rel="noopener" class="resource-card">
+          <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener" class="resource-card">
             <span class="resource-icon">📖</span>
             <div>
-              <h3>Qwen Blog</h3>
-              <p>Rilis teknis Qwen3, Qwen3-Coder, Embedding, dan Qwen2.5.</p>
+              <h3>Gemini API Models</h3>
+              <p>Dokumentasi resmi model, kemampuan, konteks, dan ketersediaan.</p>
             </div>
             <span class="resource-arrow">→</span>
           </a>
-          <a href="https://huggingface.co/Qwen" target="_blank" rel="noopener" class="resource-card">
-            <span class="resource-icon">🤗</span>
+          <a href="https://aistudio.google.com/" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">🧪</span>
             <div>
-              <h3>Qwen — Hugging Face</h3>
-              <p>Checkpoint open-weight dan model card resmi Qwen.</p>
+              <h3>Google AI Studio</h3>
+              <p>Coba model Gemini gratis langsung di browser tanpa biaya.</p>
             </div>
             <span class="resource-arrow">→</span>
           </a>
-          <a href="https://openrouter.ai/qwen" target="_blank" rel="noopener" class="resource-card">
+          <a href="https://cloud.google.com/vertex-ai" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">☁️</span>
+            <div>
+              <h3>Google Cloud Vertex AI</h3>
+              <p>Platform enterprise Google untuk deployment model Gemini.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://openrouter.ai/models?q=google" target="_blank" rel="noopener" class="resource-card">
             <span class="resource-icon">🌐</span>
             <div>
-              <h3>Qwen — OpenRouter</h3>
-              <p>Harga dan metadata model hosted yang tersedia melalui OpenRouter.</p>
+              <h3>Google — OpenRouter</h3>
+              <p>Harga dan metadata model Google yang tersedia melalui OpenRouter.</p>
             </div>
             <span class="resource-arrow">→</span>
           </a>
@@ -145,6 +148,7 @@
       </div>
     </div>
   </section>
+
 
   <div class="modal-overlay" id="modalOverlay">
     <div class="modal" id="modal">
@@ -159,13 +163,13 @@
     <div class="container">
       <p>
         <span class="logo-icon">◆</span> <strong>SeputarModelAI</strong> — Pusat komparasi model AI independen.
-        Bukan situs resmi Alibaba atau Qwen.
+        Bukan situs resmi Google atau Google DeepMind.
       </p>
-      <p class="footer-sub">Data bersumber dari Qwen, Alibaba Cloud Model Studio, Hugging Face, dan OpenRouter. Snapshot 1 Agustus 2026.</p>
+      <p class="footer-sub">Data bersumber dari Google AI for Developers (Gemini API Docs), Google Cloud Vertex AI, dan OpenRouter. Snapshot 30 Juli 2026.</p>
     </div>
   </footer>
 
-  <script src="data/qwen-models.js"></script>
+  <script src="data/gemini-models.js"></script>
   <script src="compare.js"></script>
 </body>
 </html>

@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Komparasi Model Alibaba Qwen — SeputarModelAI</title>
-  <meta name="description" content="Komparasi model Alibaba Qwen dari Qwen2.5 hingga Qwen3.7, termasuk model open-weight, coding, vision, audio, embedding, dan agent." />
+  <title>Komparasi Model DeepSeek — SeputarModelAI</title>
+  <meta name="description" content="Komparasi model DeepSeek dari V4-Pro dan V4-Flash hosted hingga V3, R1, Coder-V2, VL2, Janus-Pro, Prover-V2 open-weight, beserta keluarga legacy." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="sub-page provider-qwen">
+<body class="sub-page provider-deepseek">
 
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
@@ -22,9 +22,9 @@
         <a href="mistral.html">Mistral</a>
         <a href="openai.html">OpenAI</a>
         <a href="anthropic.html">Anthropic</a>
-        <a href="qwen.html" class="active">Qwen</a>
+        <a href="qwen.html">Qwen</a>
         <a href="zhipu.html">Zhipu AI</a>
-        <a href="deepseek.html">Deepseek</a>
+        <a href="deepseek.html" class="active">Deepseek</a>
         <a href="gemini.html">Gemini</a>
         <a href="meta.html">Meta</a>
         <a href="cohere.html">Cohere</a>
@@ -43,22 +43,22 @@
     <div class="container">
       <a href="index.html" class="back-link">← Kembali ke Beranda</a>
       <h1 class="sub-hero-title">
-        Komparasi <span class="accent">Alibaba Qwen</span>
+        Komparasi <span class="accent">DeepSeek</span>
       </h1>
       <p class="sub-hero-desc">
-        Dari Qwen2.5 yang open-weight hingga Qwen3.7-Max untuk agen frontier —
-        jelajahi model generalist, coding, vision, audio, embedding, dan reasoning dalam ekosistem Qwen.
+        Dari V4-Pro dan V4-Flash yang frontier hingga V3, R1, Coder-V2, VL2, Janus-Pro, dan Prover-V2 open-weight —
+        jelajahi model generalist, reasoning, coding, dan vision dalam ekosistem DeepSeek.
       </p>
     </div>
   </header>
 
-  <section class="mistral" id="qwen">
+  <section class="mistral" id="deepseek">
     <div class="container">
       <div class="section-head">
-        <span class="section-label">Sub-bagian · Provider #4</span>
+        <span class="section-label">Sub-bagian · Provider #5</span>
         <h2 class="section-title">Database <span class="accent">Model</span></h2>
         <p class="section-desc">
-          Klik kategori, cari nama, atau urutkan kolom untuk menemukan model Qwen yang tepat.
+          Klik kategori, cari nama, atau urutkan kolom untuk menemukan model DeepSeek yang tepat.
         </p>
       </div>
 
@@ -73,7 +73,7 @@
           <button class="filter-btn" data-filter="embedding">📊 Embedding</button>
         </div>
         <div class="search-group">
-          <input type="text" id="searchInput" class="search-input" placeholder="Cari model Qwen..." />
+          <input type="text" id="searchInput" class="search-input" placeholder="Cari model DeepSeek..." />
           <button class="toggle-legacy-btn" id="toggleLegacy">Tampilkan Legacy</button>
         </div>
       </div>
@@ -101,42 +101,42 @@
       <div class="sub-resources" style="margin-top:60px;">
         <h3 class="section-title" style="font-size:1.4rem;">Referensi <span class="accent">Resmi</span></h3>
         <div class="resource-list" style="margin-top:20px;">
-          <a href="https://qwen.ai/" target="_blank" rel="noopener" class="resource-card">
-            <span class="resource-icon">🧠</span>
-            <div>
-              <h3>Qwen AI</h3>
-              <p>Pengumuman dan informasi resmi keluarga Qwen.</p>
-            </div>
-            <span class="resource-arrow">→</span>
-          </a>
-          <a href="https://www.alibabacloud.com/help/en/model-studio/models" target="_blank" rel="noopener" class="resource-card">
-            <span class="resource-icon">☁️</span>
-            <div>
-              <h3>Models — Alibaba Cloud Model Studio</h3>
-              <p>Model ID hosted, kemampuan, dan endpoint resmi Qwen.</p>
-            </div>
-            <span class="resource-arrow">→</span>
-          </a>
-          <a href="https://qwenlm.github.io/" target="_blank" rel="noopener" class="resource-card">
+          <a href="https://api-docs.deepseek.com/" target="_blank" rel="noopener" class="resource-card">
             <span class="resource-icon">📖</span>
             <div>
-              <h3>Qwen Blog</h3>
-              <p>Rilis teknis Qwen3, Qwen3-Coder, Embedding, dan Qwen2.5.</p>
+              <h3>DeepSeek API Docs</h3>
+              <p>Dokumentasi resmi model, pricing, thinking mode, dan endpoint API.</p>
             </div>
             <span class="resource-arrow">→</span>
           </a>
-          <a href="https://huggingface.co/Qwen" target="_blank" rel="noopener" class="resource-card">
+          <a href="https://platform.deepseek.com/" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">💠</span>
+            <div>
+              <h3>DeepSeek Platform</h3>
+              <p>Konsol resmi untuk API key, usage, dan billing model DeepSeek.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://huggingface.co/deepseek-ai" target="_blank" rel="noopener" class="resource-card">
             <span class="resource-icon">🤗</span>
             <div>
-              <h3>Qwen — Hugging Face</h3>
-              <p>Checkpoint open-weight dan model card resmi Qwen.</p>
+              <h3>DeepSeek — Hugging Face</h3>
+              <p>Checkpoint open-weight dan model card resmi DeepSeek.</p>
             </div>
             <span class="resource-arrow">→</span>
           </a>
-          <a href="https://openrouter.ai/qwen" target="_blank" rel="noopener" class="resource-card">
+          <a href="https://github.com/deepseek-ai" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">🐙</span>
+            <div>
+              <h3>DeepSeek — GitHub</h3>
+              <p>Kode pelatihan, inference, dan rilis teknis resmi DeepSeek.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://openrouter.ai/deepseek" target="_blank" rel="noopener" class="resource-card">
             <span class="resource-icon">🌐</span>
             <div>
-              <h3>Qwen — OpenRouter</h3>
+              <h3>DeepSeek — OpenRouter</h3>
               <p>Harga dan metadata model hosted yang tersedia melalui OpenRouter.</p>
             </div>
             <span class="resource-arrow">→</span>
@@ -145,6 +145,7 @@
       </div>
     </div>
   </section>
+
 
   <div class="modal-overlay" id="modalOverlay">
     <div class="modal" id="modal">
@@ -159,13 +160,14 @@
     <div class="container">
       <p>
         <span class="logo-icon">◆</span> <strong>SeputarModelAI</strong> — Pusat komparasi model AI independen.
-        Bukan situs resmi Alibaba atau Qwen.
+        Bukan situs resmi DeepSeek.
       </p>
-      <p class="footer-sub">Data bersumber dari Qwen, Alibaba Cloud Model Studio, Hugging Face, dan OpenRouter. Snapshot 1 Agustus 2026.</p>
+      <p class="footer-sub">Data bersumber dari DeepSeek API Docs, Hugging Face, GitHub, dan OpenRouter. Snapshot 1 Agustus 2026.</p>
     </div>
   </footer>
 
-  <script src="data/qwen-models.js"></script>
+  <script src="data/deepseek-models.js"></script>
   <script src="compare.js"></script>
 </body>
 </html>
+

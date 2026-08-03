@@ -2,3 +2,8 @@
 .commandcode/
 .gemini/
 PekerjaanAgents/
+docs/
+
+# Agent AI personal files — not relevant to the project
+AGENTS.md
+AGENTS.MD

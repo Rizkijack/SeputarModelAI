@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Komparasi Model Alibaba Qwen — SeputarModelAI</title>
-  <meta name="description" content="Komparasi model Alibaba Qwen dari Qwen2.5 hingga Qwen3.7, termasuk model open-weight, coding, vision, audio, embedding, dan agent." />
+  <title>Komparasi Model MiniMax — SeputarModelAI</title>
+  <meta name="description" content="Komparasi model MiniMax dari M3 flagship hingga MiniMax-Text-01 (4M konteks), VL-01, Hailuo video generation, Speech-02, Music-01, dan keluarga legacy abab." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="sub-page provider-qwen">
+<body class="sub-page provider-minimax">
 
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
@@ -22,7 +22,7 @@
         <a href="mistral.html">Mistral</a>
         <a href="openai.html">OpenAI</a>
         <a href="anthropic.html">Anthropic</a>
-        <a href="qwen.html" class="active">Qwen</a>
+        <a href="qwen.html">Qwen</a>
         <a href="zhipu.html">Zhipu AI</a>
         <a href="deepseek.html">Deepseek</a>
         <a href="gemini.html">Gemini</a>
@@ -32,7 +32,7 @@
         <a href="moonshot.html">Moonshot AI</a>
         <a href="mimo.html">Xiaomi MiMo</a>
         <a href="tencent.html">Tencent</a>
-        <a href="minimax.html">MiniMax</a>
+        <a href="minimax.html" class="active">MiniMax</a>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
     </div>
@@ -43,22 +43,23 @@
     <div class="container">
       <a href="index.html" class="back-link">← Kembali ke Beranda</a>
       <h1 class="sub-hero-title">
-        Komparasi <span class="accent">Alibaba Qwen</span>
+        Komparasi <span class="accent">MiniMax</span>
       </h1>
       <p class="sub-hero-desc">
-        Dari Qwen2.5 yang open-weight hingga Qwen3.7-Max untuk agen frontier —
-        jelajahi model generalist, coding, vision, audio, embedding, dan reasoning dalam ekosistem Qwen.
+        Dari M3 flagship multimodal hingga MiniMax-Text-01 dengan konteks 4M token,
+        Hailuo video generation, Speech-02 voice cloning, dan Music-01 —
+        jelajahi ekosistem lengkap model AI dari MiniMax (稀宇科技).
       </p>
     </div>
   </header>
 
-  <section class="mistral" id="qwen">
+  <section class="mistral" id="minimax">
     <div class="container">
       <div class="section-head">
-        <span class="section-label">Sub-bagian · Provider #4</span>
+        <span class="section-label">Sub-bagian · Provider #15</span>
         <h2 class="section-title">Database <span class="accent">Model</span></h2>
         <p class="section-desc">
-          Klik kategori, cari nama, atau urutkan kolom untuk menemukan model Qwen yang tepat.
+          Klik kategori, cari nama, atau urutkan kolom untuk menemukan model MiniMax yang tepat.
         </p>
       </div>
 
@@ -66,14 +67,13 @@
         <div class="filter-group">
           <button class="filter-btn active" data-filter="all">Semua</button>
           <button class="filter-btn" data-filter="generalist">🧠 Generalist</button>
-          <button class="filter-btn" data-filter="coding">💻 Coding</button>
           <button class="filter-btn" data-filter="reasoning">⚡ Reasoning</button>
-          <button class="filter-btn" data-filter="audio">🎙️ Audio</button>
           <button class="filter-btn" data-filter="vision">👁️ Vision</button>
-          <button class="filter-btn" data-filter="embedding">📊 Embedding</button>
+          <button class="filter-btn" data-filter="video">🎬 Video</button>
+          <button class="filter-btn" data-filter="audio">🎙️ Audio</button>
         </div>
         <div class="search-group">
-          <input type="text" id="searchInput" class="search-input" placeholder="Cari model Qwen..." />
+          <input type="text" id="searchInput" class="search-input" placeholder="Cari model MiniMax..." />
           <button class="toggle-legacy-btn" id="toggleLegacy">Tampilkan Legacy</button>
         </div>
       </div>
@@ -101,43 +101,51 @@
       <div class="sub-resources" style="margin-top:60px;">
         <h3 class="section-title" style="font-size:1.4rem;">Referensi <span class="accent">Resmi</span></h3>
         <div class="resource-list" style="margin-top:20px;">
-          <a href="https://qwen.ai/" target="_blank" rel="noopener" class="resource-card">
-            <span class="resource-icon">🧠</span>
-            <div>
-              <h3>Qwen AI</h3>
-              <p>Pengumuman dan informasi resmi keluarga Qwen.</p>
-            </div>
-            <span class="resource-arrow">→</span>
-          </a>
-          <a href="https://www.alibabacloud.com/help/en/model-studio/models" target="_blank" rel="noopener" class="resource-card">
-            <span class="resource-icon">☁️</span>
-            <div>
-              <h3>Models — Alibaba Cloud Model Studio</h3>
-              <p>Model ID hosted, kemampuan, dan endpoint resmi Qwen.</p>
-            </div>
-            <span class="resource-arrow">→</span>
-          </a>
-          <a href="https://qwenlm.github.io/" target="_blank" rel="noopener" class="resource-card">
+          <a href="https://platform.minimax.io/docs" target="_blank" rel="noopener" class="resource-card">
             <span class="resource-icon">📖</span>
             <div>
-              <h3>Qwen Blog</h3>
-              <p>Rilis teknis Qwen3, Qwen3-Coder, Embedding, dan Qwen2.5.</p>
+              <h3>MiniMax API Docs</h3>
+              <p>Dokumentasi resmi model, pricing, endpoint, dan panduan integrasi API.</p>
             </div>
             <span class="resource-arrow">→</span>
           </a>
-          <a href="https://huggingface.co/Qwen" target="_blank" rel="noopener" class="resource-card">
+          <a href="https://platform.minimax.io" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">💠</span>
+            <div>
+              <h3>MiniMax Platform</h3>
+              <p>Konsol developer untuk API key, usage monitoring, dan billing.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://hailuoai.video" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">🎬</span>
+            <div>
+              <h3>Hailuo AI</h3>
+              <p>Platform video generation MiniMax — buat video dari teks dan gambar.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://huggingface.co/MiniMaxAI" target="_blank" rel="noopener" class="resource-card">
             <span class="resource-icon">🤗</span>
             <div>
-              <h3>Qwen — Hugging Face</h3>
-              <p>Checkpoint open-weight dan model card resmi Qwen.</p>
+              <h3>MiniMax — Hugging Face</h3>
+              <p>Checkpoint open-weight dan model card resmi MiniMax-01 series.</p>
             </div>
             <span class="resource-arrow">→</span>
           </a>
-          <a href="https://openrouter.ai/qwen" target="_blank" rel="noopener" class="resource-card">
+          <a href="https://github.com/MiniMax-AI" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">🐙</span>
+            <div>
+              <h3>MiniMax — GitHub</h3>
+              <p>Kode sumber, inference scripts, dan rilis teknis resmi MiniMax.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://openrouter.ai/minimax" target="_blank" rel="noopener" class="resource-card">
             <span class="resource-icon">🌐</span>
             <div>
-              <h3>Qwen — OpenRouter</h3>
-              <p>Harga dan metadata model hosted yang tersedia melalui OpenRouter.</p>
+              <h3>MiniMax — OpenRouter</h3>
+              <p>Harga dan metadata model MiniMax yang tersedia melalui OpenRouter.</p>
             </div>
             <span class="resource-arrow">→</span>
           </a>
@@ -159,13 +167,13 @@
     <div class="container">
       <p>
         <span class="logo-icon">◆</span> <strong>SeputarModelAI</strong> — Pusat komparasi model AI independen.
-        Bukan situs resmi Alibaba atau Qwen.
+        Bukan situs resmi MiniMax.
       </p>
-      <p class="footer-sub">Data bersumber dari Qwen, Alibaba Cloud Model Studio, Hugging Face, dan OpenRouter. Snapshot 1 Agustus 2026.</p>
+      <p class="footer-sub">Data bersumber dari MiniMax Platform, Hailuo AI, Hugging Face, GitHub, dan OpenRouter. Snapshot 3 Agustus 2026.</p>
     </div>
   </footer>
 
-  <script src="data/qwen-models.js"></script>
+  <script src="data/minimax-models.js"></script>
   <script src="compare.js"></script>
 </body>
 </html>
