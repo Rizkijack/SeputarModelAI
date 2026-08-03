@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Komparasi Model DeepSeek — SeputarModelAI</title>
-  <meta name="description" content="Komparasi model DeepSeek dari V4-Pro dan V4-Flash hosted hingga V3, R1, Coder-V2, VL2, Janus-Pro, Prover-V2 open-weight, beserta keluarga legacy." />
+  <title>Komparasi Model Tencent Hunyuan — SeputarModelAI</title>
+  <meta name="description" content="Komparasi 24 model Tencent Hunyuan: Tencent Hy3, Hy3 Preview, Hunyuan-A13B, HunyuanVideo, Hunyuan3D, HunyuanDiT, model vision, translation, embedding, dan model deprecated." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="sub-page provider-deepseek">
+<body class="sub-page provider-tencent">
 
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <span class="logo-icon">◆</span> SeputarModel<span class="logo-accent">AI</span>
+        <span class="logo-icon">🌀</span> SeputarModel<span class="logo-accent">AI</span>
       </a>
       <div class="nav-links">
         <a href="index.html">Beranda</a>
@@ -24,15 +24,14 @@
         <a href="anthropic.html">Anthropic</a>
         <a href="qwen.html">Qwen</a>
         <a href="zhipu.html">Zhipu AI</a>
-        <a href="deepseek.html" class="active">Deepseek</a>
+        <a href="deepseek.html">Deepseek</a>
         <a href="gemini.html">Gemini</a>
         <a href="meta.html">Meta</a>
         <a href="cohere.html">Cohere</a>
         <a href="xai.html">xAI (Grok)</a>
         <a href="moonshot.html">Moonshot AI</a>
         <a href="mimo.html">Xiaomi MiMo</a>
-        <a href="tencent.html">Tencent</a>        <a href="minimax.html">MiniMax</a>
-
+        <a href="tencent.html" class="active">Tencent</a>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
     </div>
@@ -43,22 +42,22 @@
     <div class="container">
       <a href="index.html" class="back-link">← Kembali ke Beranda</a>
       <h1 class="sub-hero-title">
-        Komparasi <span class="accent">DeepSeek</span>
+        Komparasi <span class="accent">Tencent Hunyuan</span>
       </h1>
       <p class="sub-hero-desc">
-        Dari V4-Pro dan V4-Flash yang frontier hingga V3, R1, Coder-V2, VL2, Janus-Pro, dan Prover-V2 open-weight —
-        jelajahi model generalist, reasoning, coding, dan vision dalam ekosistem DeepSeek.
+        Dari Tencent Hy3 (MoE 295B) hingga keluarga open-weight A13B, HunyuanVideo, Hunyuan3D, dan HunyuanDiT —
+        jelajahi reasoning, coding, vision, video, 3D, image, translation, embedding, serta model legacy yang dimigrasikan ke hy3-preview.
       </p>
     </div>
   </header>
 
-  <section class="mistral" id="deepseek">
+  <section class="mistral" id="tencent">
     <div class="container">
       <div class="section-head">
-        <span class="section-label">Sub-bagian · Provider #5</span>
+        <span class="section-label">Sub-bagian · Provider #13</span>
         <h2 class="section-title">Database <span class="accent">Model</span></h2>
         <p class="section-desc">
-          Klik kategori, cari nama, atau urutkan kolom untuk menemukan model DeepSeek yang tepat.
+          Klik kategori, cari nama, atau urutkan kolom untuk membandingkan model Tencent Hunyuan.
         </p>
       </div>
 
@@ -66,14 +65,19 @@
         <div class="filter-group">
           <button class="filter-btn active" data-filter="all">Semua</button>
           <button class="filter-btn" data-filter="generalist">🧠 Generalist</button>
-          <button class="filter-btn" data-filter="coding">💻 Coding</button>
           <button class="filter-btn" data-filter="reasoning">⚡ Reasoning</button>
-          <button class="filter-btn" data-filter="audio">🎙️ Audio</button>
+          <button class="filter-btn" data-filter="coding">💻 Coding</button>
           <button class="filter-btn" data-filter="vision">👁️ Vision</button>
-          <button class="filter-btn" data-filter="embedding">📊 Embedding</button>
+          <button class="filter-btn" data-filter="image">🎨 Image</button>
+          <button class="filter-btn" data-filter="video">🎬 Video</button>
+          <button class="filter-btn" data-filter="3d">🧊 3D</button>
+          <button class="filter-btn" data-filter="roleplay">💬 Roleplay</button>
+          <button class="filter-btn" data-filter="translation">🌐 Translation</button>
+          <button class="filter-btn" data-filter="embedding">🔗 Embedding</button>
+          <button class="filter-btn" data-filter="open-weight" data-filter-property="openWeight">🔓 Open-Weight</button>
         </div>
         <div class="search-group">
-          <input type="text" id="searchInput" class="search-input" placeholder="Cari model DeepSeek..." />
+          <input type="text" id="searchInput" class="search-input" placeholder="Cari model Tencent/Hunyuan..." />
           <button class="toggle-legacy-btn" id="toggleLegacy">Tampilkan Legacy</button>
         </div>
       </div>
@@ -99,45 +103,45 @@
       </div>
 
       <div class="sub-resources" style="margin-top:60px;">
-        <h3 class="section-title" style="font-size:1.4rem;">Referensi <span class="accent">Resmi</span></h3>
+        <h3 class="section-title" style="font-size:1.4rem;">Referensi <span class="accent">Resmi &amp; Kredibel</span></h3>
         <div class="resource-list" style="margin-top:20px;">
-          <a href="https://api-docs.deepseek.com/" target="_blank" rel="noopener" class="resource-card">
-            <span class="resource-icon">📖</span>
+          <a href="https://cloud.tencent.com/document/product/1729/104753" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">📋</span>
             <div>
-              <h3>DeepSeek API Docs</h3>
-              <p>Dokumentasi resmi model, pricing, thinking mode, dan endpoint API.</p>
+              <h3>Tencent Cloud — Hunyuan API</h3>
+              <p>Produk overview resmi: daftar model aktif, snapshot, dan kemampuan masing-masing.</p>
             </div>
             <span class="resource-arrow">→</span>
           </a>
-          <a href="https://platform.deepseek.com/" target="_blank" rel="noopener" class="resource-card">
-            <span class="resource-icon">💠</span>
+          <a href="https://cloud.tencent.com/document/product/1729/97731" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">💰</span>
             <div>
-              <h3>DeepSeek Platform</h3>
-              <p>Konsol resmi untuk API key, usage, dan billing model DeepSeek.</p>
+              <h3>Tencent Cloud — Pricing</h3>
+              <p>Billing resmi harga per 1M token dalam CNY untuk seluruh model Hunyuan.</p>
             </div>
             <span class="resource-arrow">→</span>
           </a>
-          <a href="https://huggingface.co/deepseek-ai" target="_blank" rel="noopener" class="resource-card">
-            <span class="resource-icon">🤗</span>
+          <a href="https://cloud.tencent.com/document/product/1729/131925" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">📰</span>
             <div>
-              <h3>DeepSeek — Hugging Face</h3>
-              <p>Checkpoint open-weight dan model card resmi DeepSeek.</p>
+              <h3>Pengumuman Migrasi Model</h3>
+              <p>Pemensiunan model lama (TurboS, T1, HY 2.0, dll.) dan migrasi resmi ke hy3-preview.</p>
             </div>
             <span class="resource-arrow">→</span>
           </a>
-          <a href="https://github.com/deepseek-ai" target="_blank" rel="noopener" class="resource-card">
-            <span class="resource-icon">🐙</span>
-            <div>
-              <h3>DeepSeek — GitHub</h3>
-              <p>Kode pelatihan, inference, dan rilis teknis resmi DeepSeek.</p>
-            </div>
-            <span class="resource-arrow">→</span>
-          </a>
-          <a href="https://openrouter.ai/deepseek" target="_blank" rel="noopener" class="resource-card">
+          <a href="https://openrouter.ai/tencent" target="_blank" rel="noopener" class="resource-card">
             <span class="resource-icon">🌐</span>
             <div>
-              <h3>DeepSeek — OpenRouter</h3>
-              <p>Harga dan metadata model hosted yang tersedia melalui OpenRouter.</p>
+              <h3>Tencent — OpenRouter</h3>
+              <p>Cross-check metadata, model weights, dan harga aggregator per model.</p>
+            </div>
+            <span class="resource-arrow">→</span>
+          </a>
+          <a href="https://github.com/Tencent-Hunyuan" target="_blank" rel="noopener" class="resource-card">
+            <span class="resource-icon">🐙</span>
+            <div>
+              <h3>Tencent-Hunyuan — GitHub</h3>
+              <p>Repo open-source resmi: Hunyuan-A13B, HunyuanVideo, Hunyuan3D, dan HunyuanDiT.</p>
             </div>
             <span class="resource-arrow">→</span>
           </a>
@@ -145,7 +149,6 @@
       </div>
     </div>
   </section>
-
 
   <div class="modal-overlay" id="modalOverlay">
     <div class="modal" id="modal">
@@ -159,15 +162,14 @@
   <footer class="footer">
     <div class="container">
       <p>
-        <span class="logo-icon">◆</span> <strong>SeputarModelAI</strong> — Pusat komparasi model AI independen.
-        Bukan situs resmi DeepSeek.
+        <span class="logo-icon">🌀</span> <strong>SeputarModelAI</strong> — Pusat komparasi model AI independen.
+        Bukan situs resmi Tencent.
       </p>
-      <p class="footer-sub">Data bersumber dari DeepSeek API Docs, Hugging Face, GitHub, dan OpenRouter. Snapshot 1 Agustus 2026.</p>
+      <p class="footer-sub">Data bersumber dari Tencent Cloud (Produk Overview &amp; Billing), OpenRouter, dan GitHub Tencent-Hunyuan. Snapshot 2 Agustus 2026.</p>
     </div>
   </footer>
 
-  <script src="data/deepseek-models.js"></script>
+  <script src="data/tencent-models.js"></script>
   <script src="compare.js"></script>
 </body>
 </html>
-
