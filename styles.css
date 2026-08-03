@@ -88,6 +88,11 @@ body.provider-moonshot {
   --accent-dim:  #0f766e;
   --accent-glow: rgba(20,184,166,.15);
 }
+body.provider-minimax {
+  --accent:      #7c5bf0;        /* MiniMax violet */
+  --accent-dim:  #6344d4;
+  --accent-glow: rgba(124,91,240,.15);
+}
 
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
